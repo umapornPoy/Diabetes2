@@ -1,0 +1,178 @@
+<style>
+    #container {
+        margin: 0px auto;
+        width: 500px;
+        height: 375px;
+        border: 10px #333 solid;
+    }
+
+    #videoElement {
+        width: 500px;
+        height: 375px;
+        background-color: #666;
+    }
+
+    #table {
+        text-align: center;
+    }
+    
+</style>
+
+    <div class="main_container">
+        <div role="main">
+            <div class="">
+                <div class="page-title">
+                    <div class="title_left">
+                        <h3>Symptoms Diabetes</h3>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                            <div class="x_title">
+                                <h2>Record Symptoms <small> medical record tracking in diabetes </small></h2>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="x_content">
+
+                                <br />
+                                <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" method="post">
+
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="sugarblood">
+                                            Sugar blood
+                                        </label> 
+                                                                             
+                                            <div class="col-md-3 col-sm-3 col-xs-9">
+                                                <input type="number" id="sugarblood" class="form-control col-md-7 col-xs-12" value="<%= locals.sugarblood || '' %>" required>
+                                            </div>
+                                        <div class="col-md-1 col-sm-1 col-xs-3">
+                                            <button type="submit" class="btn btn-warning"><i class="fa fa-camera"> </i></button>
+                                        </div>
+                                        <div class="col-md-5 col-sm-5 col-xs-12">
+                                            <p text-color="#red"> *** Take a picture from sugar blood machine. </p>
+                                        </div>
+                                        </div>
+                                    
+                                   
+                                    <!--<div class="form-group">
+                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="picture">
+                    select picture
+                </label>
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                    <div class="input-group">
+                        <br>
+                        <img id="blah" src="~/Images/catering-icon.png"
+                             class="img-circle img-responsive center-block" style="width:50%">
+                        <br><br>
+                        <input type="file" class="align:center"  onchange="readURL(this);">
+                    </div>
+                </div>
+            </div> -->
+
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="bloodpressure">
+                                            Blood pressure
+                                        </label>
+                                        <div class="col-md-3 col-sm-3 col-xs-9">
+                                            <input type="text" id="bloodpressure" name="bloodpressure" class="form-control col-md-7 col-xs-12" value="locals.bloodpressure" required>
+                                        </div>
+                                        <div class="col-md-1 col-sm-1 col-xs-3">
+                                            <button type="submit" class="btn button-gray"><i class="fa fa-camera"> </i></button>
+                                        </div>
+                                        </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="cholesterol">
+                                            Cholesterol
+                                        </label>
+                                        <div class="col-md-3 col-sm-3 col-xs-9">
+                                            <input type="number" id="cholesterol" name="cholesterol" class="form-control col-md-7 col-xs-12"  value="<%= locals.cholesterol || '' %>" required>
+                                        </div>
+
+                                        <div class="col-md-1 col-sm-1 col-xs-3">
+                                            <button type="submit" class="btn button-gray"><i class="fa fa-camera"> </i></button>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="weight1">
+                                            Weight
+                                        </label>
+                                        <div class="col-md-3 col-sm-3 col-xs-9">
+                                            <input type="number" id="weight1" name="weight1" class="form-control col-md-7 col-xs-12" value="<%= locals.weight1 || '' %>" required> 
+                                        </div>
+                                        <div class="col-md-1 col-sm-1 col-xs-3">
+                                            <button type="submit" class="btn button-gray"><i class="fa fa-camera"> </i></button>
+                                        </div>
+                                    </div>
+
+                                    <div class="ln_solid"></div>
+                                    <div class="form-group">
+                                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                                            <button type="submit" class="btn btn-success" ng-click="vm.saveUser()">Save</button>
+                                            <button type="reset" class="btn btn-danger" ng-click="/record">Cancel</button>
+
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="x_panel">
+                    <div class="x_title">
+                        <h2><i class="fa fa-align-left"></i> History  <small>Records  </small></h2>  &nbsp; &nbsp;
+                        <button onclick="parent.location='/'" class="btn btn-info" type="submit">show graph</button>
+                        <div class="clearfix"></div>
+                    </div>
+                    <div class="x_content">
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <table class="table table-striped">
+                                    <thead id="table" bgcolor="#00e6ac">
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Time</th>
+                                            <th>Sugar blood (mg/dL)</th>
+                                            @*<th>Blood pressure (MmHg.)</th>
+                            <th>Cholesterol (mg/dL) </th>
+                            <th>Weight (kg.)</th>*@
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>03/01/17</td>
+                                            <td>09.15 AM.</td>
+                                            <td>120</td>
+                                            @*<td>150/95</td>
+                            <td>210</td>
+                            <td>60</td>*@
+                                        </tr>
+                                        <tr>
+                                            <td>02/01/17</td>
+                                            <td>12.05 PM.</td>
+                                            <td>110</td>
+                                            @*<td>140/90</td>
+                            <td>190</td>
+                            <td>55</td>*@
+                                        </tr>
+                                        <tr>
+                                            <td>01/01/17</td>
+                                            <td>01.10 PM.</td>
+                                            <td>90</td>
+                                            @*<td>120/85</td>
+                            <td>190</td>
+                            <td>78</td>*@
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

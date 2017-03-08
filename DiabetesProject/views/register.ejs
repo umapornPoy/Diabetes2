@@ -1,0 +1,179 @@
+﻿<%- include('partials/header') %>
+
+
+<div id="head" class="panel panel-default" role="main">
+            <div id="head" class="panel-heading ui-draggable-handle">
+                <h1 class="panel-title" style="color:white" align="center"></h1>
+            </div>
+            <div class="clearfix"></div>
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="x_panel">
+                        <div class="x_title">
+                            <h2>
+                                Register
+                            </h2>
+                            <div class="clearfix"></div>
+                        </div>
+
+    <div class="x_content">
+
+    <% if(locals.error) { %>
+        <div class="alert alert-danger"><%= error %></div>
+    <% } %>
+    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" method="post">
+        <div class="col-md-6 col-sm-6 col-xs-12 centered">
+        <div class="form-group">
+            <label for="username control-label col-md-3 col-sm-3 col-xs-12">Username</label>
+            <input type="text" id="username" name="username" class="form-control" value="<%= locals.username || '' %>" required />
+        </div>
+        <div class="form-group">
+            <label for="password control-label col-md-3 col-sm-3 col-xs-12">Password</label>
+            <input type="password" name="password" id="password" class="form-control" value="<%= locals.password || '' %>" required/>
+        </div>
+        <div class="form-group">
+            <label for="confirm control-label col-md-3 col-sm-3 col-xs-12">Confirm Password</label>
+            <input type="password" name="confirm" id="confirm" class="form-control" value="<%= locals.confirm || '' %>" required />
+        </div>
+        <div class="form-group">
+            <label for="firstname control-label col-md-3 col-sm-3 col-xs-12">Firstname</label>
+            <input type="text" name="firstname" id="firstname" class="form-control" value="<%= locals.firstname || '' %>" required />
+        </div>
+        <div class="form-group">
+            <label for="lastname control-label col-md-3 col-sm-3 col-xs-12">Lastname</label>
+            <input type="text" id="lastname" name="lastname" class="form-control" value="<%= locals.lastname || '' %>" required />
+        </div>
+
+
+                                <div class="form-group">
+                                    <label>
+                                        Gender
+                                    </label>
+                                    <div>
+                                        <p>
+                                            <input class="flat iradio_flat-green" type="radio"
+                                                   value="Male" id="gender" name="gender" value="<%= locals.gender || '' %>" required />
+                                            Male
+                                            <input class="flat iradio_flat-green" type="radio"
+                                                    value="Female" id="gender" name="gender" value="<%= locals.gender || '' %>" required/>
+                                            Female
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>
+                                        Email
+                                    </label>
+                                    <div>
+                                        <input type="email" class="form-control has-feedback-left" id="email" placeholder="example@email.com" required="required" name="email" value="<%= locals.email || '' %>" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>
+                                        Age
+                                    </label>
+                                    <div>
+                                        <input type="text" id="age" required="required" class="form-control col-md-7 col-xs-12" name="age" value="<%= locals.age || '' %>" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-1 col-sm-2 col-xs-3">
+                                        Weight
+                                    </label>
+                                    <div class="col-md-5 col-sm-4 col-xs-3">
+                                        <input type="text" id="lastname" required="required" class="form-control col-md-2 col-xs-6" name="weight" value="<%= locals.weight || '' %>" required>
+                                    </div>
+                                    <label class="col-md-1 col-sm-2 col-xs-3">
+                                        Height
+                                    </label>
+                                    <div class="col-md-5 col-sm-4 col-xs-3">
+                                        <input type="text" id="lastname" required="required" class="form-control col-md-2 col-xs-6" name="height" value="<%= locals.height || '' %>" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label">
+                                        Type
+                                    </label>
+                                    <div>
+                                        <select class="form-control" name="type" value="<%= locals.type || '' %>" required>
+                                            <option value="">Select Type</option>
+                                            <option value="insulin">insulin</option>
+                                            <option value="Not insulin">Not insulin</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label">
+                                        Complication
+                                    </label>
+                                    <div>
+                                        <select class="form-control" name="complication" value="<%= locals.complication || '' %>" required>
+                                            <option value="">Select Complication</option>
+                                            <option value="No Complication">No Complication</option>
+                                            <option value="retinopathy">retinopathy</option>
+                                            <option value="nephropathy">nephropathy</option>
+                                            <option value="neuropathy">neuropathy</option>
+                                            <option value="Diabetic ulcer">Diabetic ulcer</option>
+                                            <option value="Diabetic foot">Diabetic foot</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label">
+                                        Disease
+                                    </label>
+                                    <div>
+                                        <select class="form-control" name="disease" value="<%= locals.disease || '' %>" required>
+                                            <option value="">Select Disease</option>
+                                            <option value="No Disease">No Disease</option>
+                                            <option value="Cardiovascular Disease">Cardiovascular Disease</option>
+                                            <option value="High blood pressure">High blood pressure</option>
+                                            <option value="kidney disease">kidney disease</option>
+                                            <option value="peripheral neuropathy Disease">peripheral neuropathy Disease</option>
+                                            <option value="Eye disease">Eye disease</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>
+                                        Drug allergy
+                                    </label>
+                                    <div>
+                                        <p>
+                                            <input class="flat iradio_flat-green" type="radio"
+                                                    value="Yes" name="dragallergy" value="<%= locals.dragallergy || '' %>" required> Yes
+                                            <input class="flat iradio_flat-green" type="radio"
+                                                    value="No" name="dragallergy" value="<%= locals.dragallergy || '' %>" required> No
+                                        </p>
+                                    </div>
+                                </div>
+
+
+                               <div class="form-group">
+                                    <label>
+                                        Email Doctor
+                                    </label>
+                                    <div>
+                                        <input type="email" class="form-control has-feedback-left" id="emaildoctor" placeholder="example@email.com" required="required" name="emaildoctor" value="<%= locals.emaildoctor || '' %>" required>
+                                    </div>
+                                </div>
+
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Register</button>
+            <a href="/login" class="btn btn-link">Cancel</a>
+        </div>
+        </div>
+    </form>
+    </div>
+    </div>
+    </div>
+    </div>
+
+<%- include('partials/footer') %>
