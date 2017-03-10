@@ -121,6 +121,26 @@ function update(_id, userParam) {
             firstName: userParam.firstName,
             lastName: userParam.lastName,
             username: userParam.username,
+            password: userParam.password,
+            confirm: userParam.confirm,
+            email: userParam.email,
+            gender: userParam.gender,
+            age: userParam.age,
+            weight:userParam.weight,
+            height: userParam.height,
+            type: userParam.type,
+            complication: userParam.complication,
+            disease: userParam.disease,
+            dragallergy: userParam.dragallergy,
+            emaildoctor: userParam.emaildoctor,
+            record: {
+                yearMonthDay: { $dateToString: { format: "%Y-%m-%d", date: "$date" } },
+                time: { $dateToString: { format: "%H:%M:%S:%L", date: "$date" } },
+                sugarblood: userParam.sugarblood,
+                bloodpressure: userParam.bloodpressure,
+                cholesterol: userParam.cholesterol,
+                weight1: userParam.weight1
+            }
         };
 
         // update password if it was entered

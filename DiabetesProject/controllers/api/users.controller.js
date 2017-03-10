@@ -6,6 +6,7 @@ var userService = require('services/user.service');
 // routes
 router.post('/authenticate', authenticateUser);
 router.post('/register', registerUser);
+router.post('/record', recordSymptoms);
 router.get('/current', getCurrentUser);
 router.put('/:_id', updateUser);
 router.delete('/:_id', deleteUser);
@@ -31,6 +32,16 @@ function authenticateUser(req, res) {
 
 
 function registerUser(req, res) {
+    userService.create(req.body)
+        .then(function () {
+            res.sendStatus(200);
+        })
+        .catch(function (err) {
+            res.status(400).send(err);
+        });
+}
+
+function recordSymptoms(req, res) {
     userService.create(req.body)
         .then(function () {
             res.sendStatus(200);

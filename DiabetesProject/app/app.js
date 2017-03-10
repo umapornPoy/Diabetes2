@@ -28,7 +28,7 @@
             .state('record', {
                 url: '/record',
                 templateUrl: 'record/record.html',
-                controller: 'Record.RecordController',
+                controller: 'Account.IndexController',
                 controllerAs: 'vm',
                 data: { activeTab: 'record' }
             });

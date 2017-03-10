@@ -45,7 +45,7 @@
                                         </label> 
                                                                              
                                             <div class="col-md-3 col-sm-3 col-xs-9">
-                                                <input type="number" id="sugarblood" class="form-control col-md-7 col-xs-12" value="<%= locals.sugarblood || '' %>" required>
+                                                <input type="text" id="sugarblood" name="sugarblood" class="form-control col-md-7 col-xs-12" ng-model="vm.user.sugarblood" required>
                                             </div>
                                         <div class="col-md-1 col-sm-1 col-xs-3">
                                             <button type="submit" class="btn btn-warning"><i class="fa fa-camera"> </i></button>
@@ -54,29 +54,14 @@
                                             <p text-color="#red"> *** Take a picture from sugar blood machine. </p>
                                         </div>
                                         </div>
-                                    
-                                   
-                                    <!--<div class="form-group">
-                <label class="control-label col-md-3 col-sm-3 col-xs-12" for="picture">
-                    select picture
-                </label>
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                    <div class="input-group">
-                        <br>
-                        <img id="blah" src="~/Images/catering-icon.png"
-                             class="img-circle img-responsive center-block" style="width:50%">
-                        <br><br>
-                        <input type="file" class="align:center"  onchange="readURL(this);">
-                    </div>
-                </div>
-            </div> -->
+
 
                                     <div class="form-group">
                                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="bloodpressure">
                                             Blood pressure
                                         </label>
                                         <div class="col-md-3 col-sm-3 col-xs-9">
-                                            <input type="text" id="bloodpressure" name="bloodpressure" class="form-control col-md-7 col-xs-12" value="locals.bloodpressure" required>
+                                            <input type="text" id="bloodpressure" name="bloodpressure" class="form-control col-md-7 col-xs-12" ng-model="vm.user.bloodpressure" required>
                                         </div>
                                         <div class="col-md-1 col-sm-1 col-xs-3">
                                             <button type="submit" class="btn button-gray"><i class="fa fa-camera"> </i></button>
@@ -88,7 +73,7 @@
                                             Cholesterol
                                         </label>
                                         <div class="col-md-3 col-sm-3 col-xs-9">
-                                            <input type="number" id="cholesterol" name="cholesterol" class="form-control col-md-7 col-xs-12"  value="<%= locals.cholesterol || '' %>" required>
+                                            <input type="text" id="cholesterol" name="cholesterol" class="form-control col-md-7 col-xs-12" ng-model="vm.user.cholesterol" required>
                                         </div>
 
                                         <div class="col-md-1 col-sm-1 col-xs-3">
@@ -101,7 +86,7 @@
                                             Weight
                                         </label>
                                         <div class="col-md-3 col-sm-3 col-xs-9">
-                                            <input type="number" id="weight1" name="weight1" class="form-control col-md-7 col-xs-12" value="<%= locals.weight1 || '' %>" required> 
+                                            <input type="text" id="weight1" name="weight1" class="form-control col-md-7 col-xs-12" ng-model="vm.user.weight1" required> 
                                         </div>
                                         <div class="col-md-1 col-sm-1 col-xs-3">
                                             <button type="submit" class="btn button-gray"><i class="fa fa-camera"> </i></button>
@@ -133,38 +118,20 @@
                                 <table class="table table-striped">
                                     <thead id="table" bgcolor="#00e6ac">
                                         <tr>
-                                            <th>Date</th>
-                                            <th>Time</th>
+                                            <th>No.</th>
                                             <th>Sugar blood (mg/dL)</th>
-                                            @*<th>Blood pressure (MmHg.)</th>
-                            <th>Cholesterol (mg/dL) </th>
-                            <th>Weight (kg.)</th>*@
+                                            <th>Blood pressure (MmHg.)</th>
+                                            <th>Cholesterol (mg/dL) </th>
+                                            <th>Weight (kg.)</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>03/01/17</td>
-                                            <td>09.15 AM.</td>
-                                            <td>120</td>
-                                            @*<td>150/95</td>
-                            <td>210</td>
-                            <td>60</td>*@
-                                        </tr>
-                                        <tr>
-                                            <td>02/01/17</td>
-                                            <td>12.05 PM.</td>
-                                            <td>110</td>
-                                            @*<td>140/90</td>
-                            <td>190</td>
-                            <td>55</td>*@
-                                        </tr>
-                                        <tr>
-                                            <td>01/01/17</td>
-                                            <td>01.10 PM.</td>
-                                            <td>90</td>
-                                            @*<td>120/85</td>
-                            <td>190</td>
-                            <td>78</td>*@
+                                            <td>1</td>
+                                            <td>{{vm.user.sugarblood}}</td>
+                                            <td>{{vm.user.bloodpressure}}</td>
+                                            <td>{{vm.user.cholesterol}}</td>
+                                            <td>{{vm.user.weight1}}</td>
                                         </tr>
                                     </tbody>
                                 </table>
