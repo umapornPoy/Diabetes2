@@ -11,6 +11,7 @@
         vm.user = null;
         vm.saveUser = saveUser;
         vm.deleteUser = deleteUser;
+        vm.recordUser = recordUser;
 
         initController();
 
@@ -23,6 +24,17 @@
 
         function saveUser() {
             UserService.Update(vm.user)
+                .then(function () {
+                    FlashService.Success('User updated');
+                })
+                .catch(function (error) {
+                    FlashService.Error(error);
+                });
+        }
+
+
+        function recordUser() {
+            UserService.Record(vm.user)
                 .then(function () {
                     FlashService.Success('User updated');
                 })

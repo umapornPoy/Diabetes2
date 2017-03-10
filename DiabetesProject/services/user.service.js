@@ -13,6 +13,7 @@ service.authenticate = authenticate;
 service.getById = getById;
 service.create = create;
 service.update = update;
+//service.record = record;
 service.delete = _delete;
 
 module.exports = service;
@@ -118,8 +119,8 @@ function update(_id, userParam) {
     function updateUser() {
         // fields to update
         var set = {
-            firstName: userParam.firstName,
-            lastName: userParam.lastName,
+            firstname: userParam.firstname,
+            lastname: userParam.lastname,
             username: userParam.username,
             password: userParam.password,
             confirm: userParam.confirm,
@@ -133,15 +134,16 @@ function update(_id, userParam) {
             disease: userParam.disease,
             dragallergy: userParam.dragallergy,
             emaildoctor: userParam.emaildoctor,
-            record: {
-                yearMonthDay: { $dateToString: { format: "%Y-%m-%d", date: "$date" } },
-                time: { $dateToString: { format: "%H:%M:%S:%L", date: "$date" } },
-                sugarblood: userParam.sugarblood,
+
+             record: [
+                {sugarblood: userParam.sugarblood,
                 bloodpressure: userParam.bloodpressure,
                 cholesterol: userParam.cholesterol,
-                weight1: userParam.weight1
-            }
+                weight1: userParam.weight1}
+            ]
+        
         };
+
 
         // update password if it was entered
         if (userParam.password) {
@@ -161,6 +163,8 @@ function update(_id, userParam) {
     return deferred.promise;
 }
 
+
+
 function _delete(_id) {
     var deferred = Q.defer();
 
@@ -174,3 +178,35 @@ function _delete(_id) {
 
     return deferred.promise;
 }
+
+
+
+
+/*function record(_id, userParam) {
+    var deferred = Q.defer();
+
+
+    function recordSymptoms() {
+        // fields to update
+        var set = {
+            record: [
+                {sugarblood: userParam.sugarblood,
+                bloodpressure: userParam.bloodpressure,
+                cholesterol: userParam.cholesterol,
+                weight1: userParam.weight1}
+            ]
+
+        };
+
+        db.users.update(
+            { _id: mongo.helper.toObjectID(_id) },
+            { $set: set },
+            function (err, doc) {
+                if (err) deferred.reject(err.name + ': ' + err.message);
+
+                deferred.resolve();
+            });
+    }
+
+    return deferred.promise;
+} */

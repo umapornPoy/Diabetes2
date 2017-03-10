@@ -31,6 +31,13 @@
                 controller: 'Account.IndexController',
                 controllerAs: 'vm',
                 data: { activeTab: 'record' }
+            })
+            .state('chart', {
+                url: '/chart',
+                templateUrl: 'record/chart.html',
+                controller: 'Account.IndexController',
+                controllerAs: 'vm',
+                data: { activeTab: 'chart' }
             });
     }
 

@@ -45,11 +45,16 @@
                                         </label> 
                                                                              
                                             <div class="col-md-3 col-sm-3 col-xs-9">
-                                                <input type="text" id="sugarblood" name="sugarblood" class="form-control col-md-7 col-xs-12" ng-model="vm.user.sugarblood" required>
+                                                <input type="text" value="texts" id="texts" name="sugarblood" class="form-control col-md-7 col-xs-12" ng-model="vm.user.sugarblood" required>
                                             </div>
-                                        <div class="col-md-1 col-sm-1 col-xs-3">
+
+                                       <!-- <div class="col-md-1 col-sm-1 col-xs-3">
                                             <button type="submit" class="btn btn-warning"><i class="fa fa-camera"> </i></button>
+                                        </div> -->
+                                        <div class="col-md-3 col-sm-3 col-xs-3">
+                                            <input type="file" accept="image/*">
                                         </div>
+
                                         <div class="col-md-5 col-sm-5 col-xs-12">
                                             <p text-color="#red"> *** Take a picture from sugar blood machine. </p>
                                         </div>
@@ -97,7 +102,7 @@
                                     <div class="form-group">
                                         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
                                             <button type="submit" class="btn btn-success" ng-click="vm.saveUser()">Save</button>
-                                            <button type="reset" class="btn btn-danger" ng-click="/record">Cancel</button>
+                                            <button type="reset" class="btn btn-danger" ui-sref="record">Cancel</button>
 
                                         </div>
                                     </div>
@@ -143,3 +148,4 @@
             </div>
         </div>
     </div>
+
