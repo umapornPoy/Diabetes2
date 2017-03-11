@@ -5,8 +5,7 @@
         .module('app')
         .controller('Account.IndexController', Controller);
 
-    function Controller($window, UserService, FlashService) {
-
+    function Controller($window, UserService, FlashService, $scope) {  
 
 /*        var GCVUrl = 'https://vision.googleapis.com/v1/images:annotate?key=AIzaSyBcP8YJ21S0E-lBWrP_LkSCu1yGBLNq_kg';
 // Enable the Cloud Vision API and get a key - see
@@ -55,15 +54,13 @@ input.onchange = function (event) {
 };  */
 
 
-
-
-
         var vm = this;
 
         vm.user = null;
         vm.saveUser = saveUser;
         vm.deleteUser = deleteUser;
-        //vm.saveRecord = saveRecord;
+        vm.deselect = deselect;
+        vm.saveRecord = saveRecord;
 
         initController();
 
@@ -71,6 +68,7 @@ input.onchange = function (event) {
             // get current user
             UserService.GetCurrent().then(function (user) {
                 vm.user = user;
+                vm.user.sugarblood = localStorage.getItem('texts');
             });
         }
 
@@ -84,15 +82,19 @@ input.onchange = function (event) {
                 });
         }
 
-     /*    function saveRecord() {
-            UserService.Record(vm.user)
+         function saveRecord() {
+            UserService.Record(vm.user._id)
                 .then(function () {
-                    FlashService.Success('User updated');
+                    FlashService.Success('Add Record');
                 })
                 .catch(function (error) {
                     FlashService.Error(error);
                 });
-        }  */
+        }  
+
+        function deselect() {
+            vm.user = "";
+          }
 
         function deleteUser() {
             UserService.Delete(vm.user._id)

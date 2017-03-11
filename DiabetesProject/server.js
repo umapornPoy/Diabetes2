@@ -16,6 +16,7 @@ app.use(session({ secret: config.secret, resave: false, saveUninitialized: true 
 
 app.use('/template', express.static(path.join(__dirname, 'template')));
 app.use('/images', express.static(path.join(__dirname, 'images')));
+app.use('/record', express.static(path.join(__dirname, 'record')));
 
 // use JWT auth to secure the api
 app.use('/api', expressJwt({ secret: config.secret }).unless({ path: ['/api/users/authenticate', '/api/users/register'] }));

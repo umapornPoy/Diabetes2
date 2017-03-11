@@ -15,7 +15,7 @@
         service.Create = Create;
         service.Update = Update;
         service.Delete = Delete;
-      // service.Record = Record;
+        service.Record = Record;
 
         return service;
 
@@ -47,9 +47,9 @@
             return $http.delete('/api/users/' + _id).then(handleSuccess, handleError);
         }
 
-      /*  function Record(user) {
-            return $http.put('/api/users/'  + user._id, user).then(handleSuccess, handleError);
-        } */
+        function Record(_id) {
+            return $http.put('/api/users/record/' + _id).then(handleSuccess, handleError);
+        } 
 
         // private functions
 

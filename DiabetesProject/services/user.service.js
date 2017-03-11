@@ -135,12 +135,13 @@ function update(_id, userParam) {
             dragallergy: userParam.dragallergy,
             emaildoctor: userParam.emaildoctor,
 
-             record: [
+
+            $push :{record: [
                 {sugarblood: userParam.sugarblood,
                 bloodpressure: userParam.bloodpressure,
                 cholesterol: userParam.cholesterol,
                 weight1: userParam.weight1}
-            ]
+            ]} 
         
         };
 
@@ -182,14 +183,14 @@ function _delete(_id) {
 
 
 
-/*function record(_id, userParam) {
+function record(_id, userParam) {
     var deferred = Q.defer();
 
 
     function recordSymptoms() {
         // fields to update
         var set = {
-            record: [
+           record: [
                 {sugarblood: userParam.sugarblood,
                 bloodpressure: userParam.bloodpressure,
                 cholesterol: userParam.cholesterol,
@@ -198,9 +199,10 @@ function _delete(_id) {
 
         };
 
-        db.users.update(
-            { _id: mongo.helper.toObjectID(_id) },
-            { $set: set },
+        var user = _.omit(userParam, 'user');
+
+        db.users.insert(
+            user,
             function (err, doc) {
                 if (err) deferred.reject(err.name + ': ' + err.message);
 
@@ -209,4 +211,4 @@ function _delete(_id) {
     }
 
     return deferred.promise;
-} */
+} 

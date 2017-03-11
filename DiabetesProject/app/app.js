@@ -38,6 +38,13 @@
                 controller: 'Account.IndexController',
                 controllerAs: 'vm',
                 data: { activeTab: 'chart' }
+            })
+            .state('email', {
+                url: '/email',
+                templateUrl: 'email/email.html',
+               // controller: 'Account.IndexController',
+                controllerAs: 'vm',
+                data: { activeTab: 'email' }
             });
     }
 
