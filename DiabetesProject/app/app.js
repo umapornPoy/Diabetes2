@@ -46,6 +46,7 @@
                 controllerAs: 'vm',
                 data: { activeTab: 'email' }
             });
+
     }
 
     function run($http, $rootScope, $window) {
@@ -67,4 +68,5 @@
             angular.bootstrap(document, ['app']);
         });
     });
+
 })();
