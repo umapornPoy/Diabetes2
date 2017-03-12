@@ -69,7 +69,10 @@
                                     <a ui-sref="record"><i class="fa fa-book"></i> Record Sugar </a>
                                 </li>                          
                                 <li>
-                                    <a href="/#/CalSugar"><i class="fa fa-calculator"></i> Calculate Sugar </a>
+                                    <a ui-sref="food"><i class="fa fa-cutlery"></i> Add Food </a>
+                                    <ul class="nav child_menu">
+                                        <li><a ui-sref="showFood">Show Food</a></li>
+                                    </ul>
                                 </li>
                                 <li>
                                     <a href="/#/Nutrients"><i class="fa fa-pie-chart"></i> Nutrition </a>
@@ -122,8 +125,8 @@
                                     <li><a href="/#/EditProfile">Edit Profile</a></li>
                                     <li>
                                         <a> ChangeLanguage
-                                            <img src="../images/USA__Icon_.png" />
-                                            <img src="../images/thailand_icon_sm.png" />
+                                            <img src="../images/USA__Icon_.png" class="ng-scope" ng-click="changeLanguage('en')" translate="BUTTON_LANG_EN"/>
+                                            <img src="../images/thailand_icon_sm.png"  class="ng-scope" ng-click="changeLanguage('th')" translate="BUTTON_LANG_TH"/>
                                         </a>
                                     </li>
 

@@ -13,8 +13,9 @@ service.authenticate = authenticate;
 service.getById = getById;
 service.create = create;
 service.update = update;
-//service.record = record;
+service.record = record;
 service.delete = _delete;
+service.food = food;
 
 module.exports = service;
 
@@ -113,7 +114,7 @@ function update(_id, userParam) {
                 });
         } else {
             updateUser();
-        }
+        } 
     });
 
     function updateUser() {
@@ -134,17 +135,26 @@ function update(_id, userParam) {
             disease: userParam.disease,
             dragallergy: userParam.dragallergy,
             emaildoctor: userParam.emaildoctor,
+            record: userParam.record
 
-
-            $push :{record: [
+           /* record: [
                 {sugarblood: userParam.sugarblood,
                 bloodpressure: userParam.bloodpressure,
                 cholesterol: userParam.cholesterol,
                 weight1: userParam.weight1}
-            ]} 
+            ] */
         
         };
 
+      /*  function updateUserRecord() {
+             record: [
+                {sugarblood: userParam.sugarblood,
+                bloodpressure: userParam.bloodpressure,
+                cholesterol: userParam.cholesterol,
+                weight1: userParam.weight1}
+            ]
+
+        }*/
 
         // update password if it was entered
         if (userParam.password) {
@@ -160,7 +170,7 @@ function update(_id, userParam) {
                 deferred.resolve();
             });
     }
-
+ 
     return deferred.promise;
 }
 
@@ -184,31 +194,60 @@ function _delete(_id) {
 
 
 function record(_id, userParam) {
+
     var deferred = Q.defer();
 
-
-    function recordSymptoms() {
-        // fields to update
-        var set = {
-           record: [
-                {sugarblood: userParam.sugarblood,
-                bloodpressure: userParam.bloodpressure,
-                cholesterol: userParam.cholesterol,
-                weight1: userParam.weight1}
-            ]
-
-        };
-
-        var user = _.omit(userParam, 'user');
-
-        db.users.insert(
-            user,
-            function (err, doc) {
-                if (err) deferred.reject(err.name + ': ' + err.message);
-
-                deferred.resolve();
-            });
+    var recordData = {
+        sugarblood: userParam.sugarblood,
+        bloodpressure: userParam.bloodpressure,
+        cholesterol: userParam.cholesterol,
+        weight1: userParam.weight1
     }
+
+    db.users.update(
+        { _id: mongo.helper.toObjectID(_id) },
+        { $push: { record: recordData } }, function (error) {
+            if (error) {
+                console.log('Error to save')
+                return deferred.reject()
+            }
+
+            console.log(`Save Record to ${userParam.username}`)
+            return deferred.resolve();
+        })
+
+
+    return deferred.promise;
+} 
+
+
+function food(_id, userParam) {
+
+    var deferred = Q.defer();
+
+    var foodData = {
+        item_name: userParam.item_name,
+        serving_size_qty: userParam.serving_size_qty,
+        calories: userParam.calories,
+        sugars: userParam.sugars,
+        total_fat: userParam.total_fat,
+        cholesterol1: userParam.cholesterol1,
+        sodium: userParam.sodium,
+        protein: userParam.protein
+    }
+
+    db.users.update(
+        { _id: mongo.helper.toObjectID(_id) },
+        { $push: { food: foodData } }, function (error) {
+            if (error) {
+                console.log('Error to save')
+                return deferred.reject()
+            }
+
+            console.log(`Save Food to ${userParam.username}`)
+            return deferred.resolve();
+        })
+
 
     return deferred.promise;
 } 

@@ -16,6 +16,7 @@
         service.Update = Update;
         service.Delete = Delete;
         service.Record = Record;
+        service.Food = Food;
 
         return service;
 
@@ -47,8 +48,12 @@
             return $http.delete('/api/users/' + _id).then(handleSuccess, handleError);
         }
 
-        function Record(_id) {
-            return $http.put('/api/users/record/' + _id).then(handleSuccess, handleError);
+        function Record(user) {
+            return $http.post('/api/users/record/'  + user._id, user).then(handleSuccess, handleError);
+        } 
+
+         function Food(user) {
+            return $http.post('/api/users/food/'  + user._id, user).then(handleSuccess, handleError);
         } 
 
         // private functions

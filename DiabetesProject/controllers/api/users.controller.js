@@ -6,10 +6,13 @@ var userService = require('services/user.service');
 // routes
 router.post('/authenticate', authenticateUser);
 router.post('/register', registerUser);
-router.put('/:_id', recordSymptoms);
+router.post('/record', recordSymptoms); // url = localhost:3000/api/users/record/
+router.post('/record/:userid', recordSymptoms); // url = localhost:3000/api/users/record/201928309182as;  :userid = urlparameter
 router.get('/current', getCurrentUser);
 router.put('/:_id', updateUser);
 router.delete('/:_id', deleteUser);
+router.post('/food', addFood);
+router.post('/food/:userid', addFood);
 
 module.exports = router;
 
@@ -42,13 +45,9 @@ function registerUser(req, res) {
 }
 
 function recordSymptoms(req, res) {
-           var userId = req.user.sub;
-    if (req.params._id !== userId) {
-        // can only update own account
-        return res.status(401).send('You can only update your own account');
-    }
-
-    userService.create(userId,req.body)
+    var userId = req.user.sub;
+    
+    userService.record(userId,req.body)
         .then(function () {
             res.sendStatus(200);
         })
@@ -57,6 +56,17 @@ function recordSymptoms(req, res) {
         });
 }  
 
+function addFood(req, res) {
+    var userId = req.user.sub;
+    
+    userService.food(userId,req.body)
+        .then(function () {
+            res.sendStatus(200);
+        })
+        .catch(function (err) {
+            res.status(400).send(err);
+        });
+}  
 
 function getCurrentUser(req, res) {
     userService.getById(req.user.sub)
