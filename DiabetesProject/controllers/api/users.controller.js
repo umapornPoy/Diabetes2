@@ -11,6 +11,8 @@ router.post('/record/:userid', recordSymptoms); // url = localhost:3000/api/user
 router.get('/current', getCurrentUser);
 router.put('/:_id', updateUser);
 router.delete('/:_id', deleteUser);
+router.post('/food', addFood);
+router.post('/food/:userid', addFood);
 
 module.exports = router;
 
@@ -54,6 +56,17 @@ function recordSymptoms(req, res) {
         });
 }  
 
+function addFood(req, res) {
+    var userId = req.user.sub;
+    
+    userService.food(userId,req.body)
+        .then(function () {
+            res.sendStatus(200);
+        })
+        .catch(function (err) {
+            res.status(400).send(err);
+        });
+}  
 
 function getCurrentUser(req, res) {
     userService.getById(req.user.sub)

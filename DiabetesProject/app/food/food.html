@@ -1,0 +1,122 @@
+<style>
+        body {
+            font-family: 'Kanit', sans-serif;
+        }
+
+        #head {
+            color: #333;
+            background-color: darkred;
+            border-color: #5c5151;
+        }
+        .centered {
+        float: none;
+    margin-left: auto;
+    margin-right: auto;
+    }
+</style> 
+
+ <div class="row">
+        <div class="col-md-12 col-sm-12 col-xs-12">
+            <h2>Add Food</h2>
+
+            <div class="x_panel tile fixed_height_500">
+                <div class="row top_tiles">
+                    <div class="animated flipInY col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="tile-stats">
+                            <div class="icon col-lg-4 col-md-4 col-sm-4 col-xs-4 pull-right"><a href="https://webqr.com/"><i class="fa fa-barcode pull-right"></i></a></div>
+                            <div class="col-md-8 col-sm-8 col-xs-8 form-group pull-left top_search">
+                                <div class="input-group">
+                                    <input type="text" class="form-control pure-input-rounded" id="searchBar" placeholder="Search for a Food">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-info" type="button" onclick='searchValue()'><i style="color:white">Go!</i></button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h1 class="panel-title" style="color:dodgerblue" align="center">
+                    <strong>Nutrition</strong>
+                </h1>
+                <br />
+                 
+                <div class="x_content">
+                      <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left centered" method="post">
+                    <div class="form-group">
+                        <label for="item_name" class="control-label col-md-3 col-sm-3 col-xs-12 form-group has-feedback">Name</label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="text" class="form-control" id="item_name" name="item_name" ng-model="vm.user.item_name" required >
+                    </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="serving_size_qty" class="control-label col-md-3 col-sm-3 col-xs-12 form-group has-feedback">Serving Size:</label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="text" class="form-control" id="serving_size_qty" name="serving_size_qty" ng-model="vm.user.serving_size_qty" required >
+                    </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="calories" class="control-label col-md-3 col-sm-3 col-xs-12 form-group has-feedback">Calories:</label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="text" class="form-control" id="calories" name="calories" ng-model="vm.user.calories" required >
+                    </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sugars" class="control-label col-md-3 col-sm-3 col-xs-12 form-group has-feedback">Sugars:</label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="text" class="form-control" id="sugars" name="sugars" ng-model="vm.user.sugars" required >
+                    </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="total_fat" class="control-label col-md-3 col-sm-3 col-xs-12 form-group has-feedback">Total Fat:</label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="text" class="form-control" id="total_fat" name="total_fat" ng-model="vm.user.total_fat" required >
+                    </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cholesterol" class="control-label col-md-3 col-sm-3 col-xs-12 form-group has-feedback">Cholesterol:</label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="text" class="form-control" id="cholesterol" name="cholesterol" ng-model="vm.user.cholesterol" required >
+                    </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sodium" class="control-label col-md-3 col-sm-3 col-xs-12 form-group has-feedback">sodium:</label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="text" class="form-control" id="sodium" name="sodium" ng-model="vm.user.sodium" required >
+                    </div>
+                    </div>
+
+
+                    <div class="form-group">
+                        <label for="protein" class="control-label col-md-3 col-sm-3 col-xs-12 form-group has-feedback">Protein:</label>
+                    <div class="col-md-6 col-sm-6 col-xs-12">
+                            <input type="text" class="form-control" id="protein" name="protein" ng-model="vm.user.protein" required >
+                    </div>
+                    </div>
+                    
+                     <div class="form-group">
+                            <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                                    <button type="submit" class="btn btn-success" ng-click="vm.saveFood()">Save</button>
+                                    <button type="reset" class="btn btn-info" ui-sref="showFood">Show Food</button>
+                                    <button type="reset" class="btn btn-danger" ng-click="vm.deselect()">Cancel</button>
+                            </div>
+                    </div>
+
+      </form>
+    </div>
+
+                </div>
+                <br />
+                <br />
+
+            </div>
+        </div>
+    </div>
+
+    <script src="food/food.js"></script>

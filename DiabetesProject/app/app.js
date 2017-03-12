@@ -45,6 +45,20 @@
                // controller: 'Account.IndexController',
                 controllerAs: 'vm',
                 data: { activeTab: 'email' }
+            })
+            .state('food', {
+                url: '/food',
+                templateUrl: 'food/food.html',
+                controller: 'Account.IndexController',
+                controllerAs: 'vm',
+                data: { activeTab: 'food' }
+            })
+            .state('showFood', {
+                url: '/showFood',
+                templateUrl: 'food/showFood.html',
+                controller: 'Account.IndexController',
+                controllerAs: 'vm',
+                data: { activeTab: 'showFood' }
             });
 
     }
