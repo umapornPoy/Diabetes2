@@ -59,6 +59,13 @@
                 controller: 'Account.IndexController',
                 controllerAs: 'vm',
                 data: { activeTab: 'showFood' }
+            })
+            .state('Nutrition', {
+                url: '/Nutrition',
+                templateUrl: 'Nutrition/Nutrition.html',
+                controller: 'Account.IndexController',
+                controllerAs: 'vm',
+                data: { activeTab: 'Nutrition' }
             });
 
     }

@@ -197,6 +197,7 @@ function record(_id, userParam) {
 
     var deferred = Q.defer();
 
+
     var recordData = {
         sugarblood: userParam.sugarblood,
         bloodpressure: userParam.bloodpressure,

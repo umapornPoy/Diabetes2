@@ -22,7 +22,8 @@ router.post('/', function (req, res) {
             return res.render('record', {
                 error: response.body,
                 record: [
-                {sugarblood: req.body.sugarblood,
+                {
+                sugarblood: req.body.sugarblood,
                 bloodpressure: req.body.bloodpressure,
                 cholesterol: req.body.cholesterol,
                 weight1: req.body.weight1}
