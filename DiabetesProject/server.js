@@ -8,6 +8,9 @@ var config = require('config.json');
 
 var path = require('path')
 
+var nodemailer = require("nodemailer");
+var smtpTransport = require("nodemailer-smtp-transport");
+
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -31,6 +34,45 @@ app.use('/record', require('./controllers/record.controller'));
 // make '/app' default route
 app.get('/', function (req, res) {
     return res.redirect('/app');
+});
+
+
+/*
+    Here we are configuring our SMTP Server details.
+    STMP is mail server which is responsible for sending and recieving email.
+*/
+var smtpTransport = nodemailer.createTransport({
+    service: "gmail",
+    host: "smtp.gmail.com",
+    auth: {
+        user: "diabetecares@gmail.com",
+        pass: "admin-care"
+    }
+});
+/*------------------SMTP Over-----------------------------*/
+
+/*------------------Routing Started ------------------------*/
+
+app.get('/',function(req,res){
+    res.sendFile(__dirname + '/index.html');
+});
+app.get('/send',function(req,res){
+    var mailOptions={
+        
+        to : req.query.to,
+        subject : req.query.subject,
+        text : req.query.text
+    };
+    console.log(mailOptions);
+    smtpTransport.sendMail(mailOptions, function(error, response){
+     if(error){
+            console.log(error);
+        res.end("error");
+     }else{
+            console.log("Message sent: " + response.message);
+        res.end("sent");
+         }
+});
 });
 
 // start server

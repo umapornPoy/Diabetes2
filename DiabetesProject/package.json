@@ -1,25 +1,28 @@
 {
-    "name": "DiabetesCare",
-    "version": "1.0.0",
-    "description": "MEAN Stack Diabetes Care Application",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/cornflourblue/mean-stack-registration-login-example.git"
-    },
-    "dependencies": {
-        "bcryptjs": "^2.1.0",
-        "body-parser": "^1.13.2",
-        "ejs": "^2.3.3",
-        "express": "^4.13.0",
-        "express-jwt": "^3.0.1",
-        "express-session": "^1.11.3",
-        "jsonwebtoken": "^5.0.2",
-        "lodash": "^3.10.0",
-        "mongodb": "^2.1.16",
-        "mongoskin": "^2.1.0",
-        "q": "^1.4.1",
-        "request": "^2.58.0",
-        "rootpath": "^0.1.2"
-    },
-    "license": "MIT"
+  "name": "DiabetesCare",
+  "version": "1.0.0",
+  "description": "MEAN Stack Diabetes Care Application",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cornflourblue/mean-stack-registration-login-example.git"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.17.1",
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "express-jwt": "^3.4.0",
+    "express-session": "^1.15.1",
+    "googleapis": "^18.0.0",
+    "jsonwebtoken": "^5.7.0",
+    "lodash": "^3.10.1",
+    "mongodb": "^2.2.24",
+    "mongoskin": "^2.1.0",
+    "nodemailer": "^3.1.5",
+    "nodemailer-smtp-transport": "^2.7.2",
+    "q": "^1.4.1",
+    "request": "^2.81.0",
+    "rootpath": "^0.1.2"
+  },
+  "license": "MIT"
 }

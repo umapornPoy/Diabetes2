@@ -1,0 +1,81 @@
+
+  <!--
+  <div id="container">
+  <h1>Send e-mail to your doctor</h1>
+  <input id="to" type="text" placeholder="Enter E-mail ID where you want to send" />
+  <input id="subject" type="text" placeholder="Write Subject" />
+  <textarea id="content" cols="40" rows="5" placeholder="Write what you want to send"></textarea>
+  <button id="send_email">Send Email</button>
+  <span id="message"></span>
+  </div>
+</div>
+-->
+<div class="row">
+ <div class="col-md-12 col-sm-12 col-xs-12">
+   <div class="x_panel">
+    <div class="x_title">
+      <h2>Send e-mail<small>to your doctor</small></h2>
+         <div class="clearfix"></div>
+    </div>
+<div class="x_content">
+
+<div id="container">
+  <div class="x_content">
+    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left centered" method="post">
+        <div class="form-group">
+            <label for="email" class="control-label col-md-3 col-sm-3 col-xs-12">Email</label>
+            <div class="col-md-6 col-sm-6 col-xs-12">
+            <input id="to" type="text" placeholder="Enter E-mail" 
+            class="form-control col-md-7 col-xs-12"/>
+            </div>  
+        </div>
+
+        <div class="form-group">
+            <label for="subject" class="control-label col-md-3 col-sm-3 col-xs-12">Subject</label>
+            <div class="col-md-6 col-sm-9 col-xs-12">
+            <input id="subject" type="text" placeholder="Write Subject" 
+             class="form-control col-md-7 col-xs-12"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="content" class="control-label col-md-3 col-sm-3 col-xs-12">Content</label>
+            <div class="col-md-6 col-sm-9 col-xs-12">
+            <textarea id="content" cols="40" rows="5" placeholder="Write what you want to send"
+             class="form-control col-md-7 col-xs-12"> </textarea>
+            </div>
+        </div>
+    </form>  
+  </div> 
+
+<div class="form-group">
+        <div class="col-md-6 col-sm-12 col-xs-6 col-md-offset-3">
+            <button id="send_email" class="btn btn-info">Send Email</button>
+        </div>       
+</div> 
+
+<div class="form-group">
+  <div class="col-md-6 col-sm-12 col-xs-6 col-md-offset-3">
+    <span id="message"></span>
+  </div>
+</div>
+</div>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script>// <![CDATA[
+  $(document).ready(function(){
+      var from,to,subject,text,from;
+      $("#send_email").click(function(){      
+          to=$("#to").val();
+          subject=$("#subject").val();
+          text=$("#content").val();
+          $("#message").text("Sending E-mail...Please wait");
+          $.get("http://localhost:3000/send",{to:to,subject:subject,text:text},function(data){
+          if(data=="sent")
+          {
+              $("#message").empty().html("Email is been sent at "+to+"");
+          }
+
+  });
+      });
+  });
+  </script>
