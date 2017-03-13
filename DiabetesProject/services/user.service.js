@@ -197,8 +197,10 @@ function record(_id, userParam) {
 
     var deferred = Q.defer();
 
+    var date = new Date();
 
     var recordData = {
+        date: userParam.date,
         sugarblood: userParam.sugarblood,
         bloodpressure: userParam.bloodpressure,
         cholesterol: userParam.cholesterol,
@@ -225,8 +227,11 @@ function record(_id, userParam) {
 function food(_id, userParam) {
 
     var deferred = Q.defer();
+  
+    var date = new Date();
 
     var foodData = {
+        date: userParam.date,
         item_name: userParam.item_name,
         serving_size_qty: userParam.serving_size_qty,
         calories: userParam.calories,

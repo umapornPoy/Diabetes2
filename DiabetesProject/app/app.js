@@ -42,7 +42,7 @@
             .state('email', {
                 url: '/email',
                 templateUrl: 'email/email.html',
-               // controller: 'Account.IndexController',
+                controller: 'Account.IndexController',
                 controllerAs: 'vm',
                 data: { activeTab: 'email' }
             })

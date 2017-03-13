@@ -22,7 +22,8 @@ router.post('/', function (req, res) {
             return res.render('food', {
                 error: response.body,
                 food: [
-                {item_name: req.body.item_name,
+                {date: req.body.date,
+                item_name: req.body.item_name,
                 serving_size_qty: req.body.serving_size_qty,
                 calories: req.body.calories,
                 sugars: req.body.sugars,
