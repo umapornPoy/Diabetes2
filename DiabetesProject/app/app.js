@@ -1,12 +1,13 @@
 ﻿(function () {
     'use strict';
 
-    angular
-        .module('app', ['ui.router'])
+    var app = angular
+        .module('app', ['ui.router','pascalprecht.translate'])
         .config(config)
         .run(run);
 
-    function config($stateProvider, $urlRouterProvider) {
+
+    function config($stateProvider, $urlRouterProvider, $translateProvider){
         // default route
         $urlRouterProvider.otherwise("/");
 
@@ -61,6 +62,20 @@
                 data: { activeTab: 'showFood' }
             });
 
+            $translateProvider.translations('en', {
+              QUESTION:"Where are you going?",
+              BUTTON_LANG_EN:"english",
+              BUTTON_LANG_ES:"spanish"
+            });
+            $translateProvider.translations('th', {
+              QUESTION:"Á donde te vas?",
+              BUTTON_LANG_EN:"inglés",
+              BUTTON_LANG_ES:"español"
+            });
+            $translateProvider.useSanitizeValueStrategy('escape');
+            $translateProvider.preferredLanguage('en');
+       
+              
     }
 
     function run($http, $rootScope, $window) {
@@ -82,5 +97,11 @@
             angular.bootstrap(document, ['app']);
         });
     });
+
+    app.controller('langCtrl',['$scope', '$translate', function ($scope, $translate) {
+    $scope.changeLanguage = function(key){
+      $translate.use(key);
+    };
+  }]);
 
 })();
