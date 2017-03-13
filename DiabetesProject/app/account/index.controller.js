@@ -7,6 +7,21 @@
 
     function Controller($window, UserService, FlashService, $scope) {  
 
+        var date = new Date();
+        console.log(date);
+
+        var day = date.getDate();
+        console.log(day);
+
+        var month = date.getMonth();
+        console.log(month);
+
+        var year = date.getFullYear();
+        console.log(year);
+
+        console.log(day+"/"+month+"/"+year);
+
+
         var vm = this;
 
         vm.user = null;
@@ -88,7 +103,10 @@
                     FlashService.Error(error);
                 });
         }
+
+
     }
+
 
 
 })();

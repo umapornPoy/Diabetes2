@@ -1,12 +1,11 @@
-﻿<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE>
+<html ui-app="app">
 <head>
     <meta charset="utf-8" />
     <title>Diabetes Care Web Application</title>
 
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
     <link href="app-content/app.css" rel="stylesheet" />
-
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Meta, title, CSS, favicons, etc. -->
@@ -31,7 +30,7 @@
 
 
 </head>
-<body class="nav-md">
+<body class="nav-md" ui-controller="Home.IndexController">
 
     <div class="container body"  ng-controller="langCtrl">
         <div class="main_container">
@@ -69,13 +68,13 @@
                                     <a ui-sref="record"><i class="fa fa-book"></i> Record Sugar </a>
                                 </li>                          
                                 <li>
-                                    <a ui-sref="food"><i class="fa fa-cutlery"></i> Add Food </a>
+                                    <a ui-sref="food"><i class="fa fa-cutlery"></i> Add Food <span class="fa fa-chevron-down"></span> </a>
                                     <ul class="nav child_menu">
                                         <li><a ui-sref="showFood">Show Food</a></li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a href="/#/Nutrients"><i class="fa fa-pie-chart"></i> Nutrition </a>
+                                    <a ui-sref="Nutrition"><i class="fa fa-pie-chart"></i> Nutrition </a>
                                 </li>
                                 <li>
                                     <a ui-sref="email"><i class="fa fa-share"></i> Share <span class="fa fa-chevron-down"></span></a>
@@ -196,7 +195,11 @@
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script> 
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
     
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> 1645a21bbc8bb12df48343ef63b694fb2168d244
     <!-- application scripts -->
     <script src="app.js"></script>
     <script src="translate/translate.js"></script>
@@ -209,7 +212,6 @@
     <script src="app-services/flash.service.js"></script>
     <script src="home/index.controller.js"></script>
     <script src="account/index.controller.js"></script>
-    <script src="record/index.controller.js"></script>
 
 
     <script src="../template/vendors/jquery/dist/jquery.min.js"></script>
@@ -248,6 +250,10 @@
 
     <!-- Custom Theme Scripts -->
     <script src="../template/build/js/custom.min.js"></script>
+
+     <!-- DateJS -->
+    <script src="../template/vendors/DateJS/build/date.js"></script>
+
 
 
 <script>

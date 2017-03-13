@@ -43,7 +43,7 @@
             .state('email', {
                 url: '/email',
                 templateUrl: 'email/email.html',
-               // controller: 'Account.IndexController',
+                controller: 'Account.IndexController',
                 controllerAs: 'vm',
                 data: { activeTab: 'email' }
             })
@@ -60,6 +60,13 @@
                 controller: 'Account.IndexController',
                 controllerAs: 'vm',
                 data: { activeTab: 'showFood' }
+            })
+            .state('Nutrition', {
+                url: '/Nutrition',
+                templateUrl: 'Nutrition/Nutrition.html',
+                controller: 'Account.IndexController',
+                controllerAs: 'vm',
+                data: { activeTab: 'Nutrition' }
             });
 
             $translateProvider.translations('en', {
