@@ -98,7 +98,6 @@
         });
     });
 
-<<<<<<< HEAD
   function Controller(UserService) {
         var vm = this;
 
@@ -113,12 +112,12 @@
             });
         }
     }
-=======
+
     app.controller('langCtrl',['$scope', '$translate', function ($scope, $translate) {
     $scope.changeLanguage = function(key){
       $translate.use(key);
     };
   }]);
->>>>>>> f25c0efa5fcb0114afd34a239ba9621d9bdaae09
+
 
 })();

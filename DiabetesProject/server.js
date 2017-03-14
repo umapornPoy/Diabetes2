@@ -6,13 +6,11 @@ var bodyParser = require('body-parser');
 var expressJwt = require('express-jwt');
 var config = require('config.json');
 
-<<<<<<< HEAD
 var Quagga = require('quagga').default;
 
 var path = require('path')
-=======
+
 var path = require('path');
->>>>>>> f25c0efa5fcb0114afd34a239ba9621d9bdaae09
 
 var nodemailer = require("nodemailer");
 var smtpTransport = require("nodemailer-smtp-transport");
