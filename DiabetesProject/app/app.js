@@ -43,7 +43,7 @@
             .state('email', {
                 url: '/email',
                 templateUrl: 'email/email.html',
-               // controller: 'Account.IndexController',
+                controller: 'Account.IndexController',
                 controllerAs: 'vm',
                 data: { activeTab: 'email' }
             })
@@ -98,7 +98,7 @@
         });
     });
 
-<<<<<<< HEAD
+
   function Controller(UserService) {
         var vm = this;
 
@@ -113,12 +113,12 @@
             });
         }
     }
-=======
+
     app.controller('langCtrl',['$scope', '$translate', function ($scope, $translate) {
     $scope.changeLanguage = function(key){
       $translate.use(key);
     };
   }]);
->>>>>>> f25c0efa5fcb0114afd34a239ba9621d9bdaae09
+
 
 })();
