@@ -96,6 +96,7 @@
    LatestSugar : 'Latest Sugar :',
    SugarGraph : 'Sugar Graph',
    Thegraphshowsthebloodsugar : 'The graph shows the blood sugar.',
+   Profile : 'Profile',
 
    Changelanguage: 'Change language',
    Logout:'Logout',
@@ -207,6 +208,7 @@
    LatestSugar : 'ระดับน้ำตาลล่าสุด :',
    SugarGraph : 'Sugar Graph',
    Thegraphshowsthebloodsugar : 'กราฟแสดงระดับน้ำตาล',
+   Profile : 'ข้อมูลส่วนตัว',
 
    
    Changelanguage: 'เปลี่ยนภาษา',
