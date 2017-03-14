@@ -32,6 +32,12 @@
 </head>
 
 <body class="nav-md" ng-controller="Account.IndexController">
+<<<<<<< HEAD
+=======
+
+<body class="nav-md">
+
+>>>>>>> 3183d8833b6e31abdda54dbda156787e72b0d112
 
     <div class="container body"  ui-controller="Account.IndexController" >
         <div class="main_container" ng-controller="langCtrl">
@@ -122,7 +128,7 @@
                                     <span class="fa fa-angle-down"></span>
                                 </a>
                                 <ul class="dropdown-menu dropdown-usermenu pull-right">
-                                    <li><a href="/#/EditProfile">{{ 'EditProfile' | translate}}</a></li>
+                                    <li><a ui-sref="account">{{ 'EditProfile' | translate}}</a></li>
                                      <!--<li translate="QUESTION"></li><button type="button" class="btn btn-info active" ng-click="changeLanguage('en')" translate="BUTTON_LANG_EN"></button><button type="button" class="btn btn-info active"ng-click="changeLanguage('es')" translate="BUTTON_LANG_ES"></button>-->
                                     <li>
                                         <a> {{ 'Changelanguage' | translate}}
