@@ -22,6 +22,8 @@
         console.log(day+"/"+month+"/"+year);
 
 
+
+
         var vm = this;
 
         vm.user = null;

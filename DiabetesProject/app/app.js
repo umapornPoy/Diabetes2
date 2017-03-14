@@ -35,14 +35,14 @@
             .state('chart', {
                 url: '/chart',
                 templateUrl: 'record/chart.html',
-                controller: 'Account.IndexController',
+                //controller: 'LineCtrl',
                 controllerAs: 'vm',
                 data: { activeTab: 'chart' }
             })
             .state('email', {
                 url: '/email',
                 templateUrl: 'email/email.html',
-                controller: 'Account.IndexController',
+               // controller: 'Account.IndexController',
                 controllerAs: 'vm',
                 data: { activeTab: 'email' }
             })
@@ -59,6 +59,13 @@
                 controller: 'Account.IndexController',
                 controllerAs: 'vm',
                 data: { activeTab: 'showFood' }
+            })
+            .state('barcode', {
+                url: '/barcode',
+                templateUrl: 'food/barcode.html',
+               // controller: 'Account.IndexController',
+                controllerAs: 'vm',
+                data: { activeTab: 'barcode' }
             })
             .state('Nutrition', {
                 url: '/Nutrition',
@@ -89,5 +96,20 @@
             angular.bootstrap(document, ['app']);
         });
     });
+
+  function Controller(UserService) {
+        var vm = this;
+
+        vm.user = null;
+
+        initController();
+
+        function initController() {
+            // get current user
+            UserService.GetCurrent().then(function (user) {
+                vm.user = user;
+            });
+        }
+    }
 
 })();

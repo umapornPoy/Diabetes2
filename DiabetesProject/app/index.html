@@ -30,7 +30,7 @@
 
 
 </head>
-<body class="nav-md" ui-controller="Home.IndexController">
+<body class="nav-md" ng-controller="Account.IndexController">
 
     <div class="container body">
         <div class="main_container">
@@ -154,11 +154,11 @@
             <li  ng-class="{active: activeTab === 'home'}"><a ui-sref="home">Home</a></li>
             <li ng-class="{active: activeTab === 'account'}"><a ui-sref="account">Account</a></li>
             <li><a href="/login" target="_self">Logout</a></li>
-        </ul> -->
+        </ul> 
       
  <div class="flash-message" ng-if="flash">
             <div class="{{'alert alert-' + flash.type}}" ng-bind="flash.message"></div>
-        </div>
+        </div>-->
 
 
     <!-- header -->
@@ -193,7 +193,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
-    
+
 
     <!-- application scripts -->
     <script src="app.js"></script>
@@ -201,6 +201,7 @@
     <script src="app-services/flash.service.js"></script>
     <script src="home/index.controller.js"></script>
     <script src="account/index.controller.js"></script>
+
 
 
     <script src="../template/vendors/jquery/dist/jquery.min.js"></script>
@@ -242,6 +243,7 @@
 
      <!-- DateJS -->
     <script src="../template/vendors/DateJS/build/date.js"></script>
+
 
 
 
