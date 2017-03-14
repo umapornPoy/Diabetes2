@@ -68,21 +68,7 @@
                 controllerAs: 'vm',
                 data: { activeTab: 'Nutrition' }
             });
-
-            $translateProvider.translations('en', {
-              QUESTION:"Where are you going?",
-              BUTTON_LANG_EN:"english",
-              BUTTON_LANG_ES:"spanish"
-            });
-            $translateProvider.translations('th', {
-              QUESTION:"Á donde te vas?",
-              BUTTON_LANG_EN:"inglés",
-              BUTTON_LANG_ES:"español"
-            });
-            $translateProvider.useSanitizeValueStrategy('escape');
-            $translateProvider.preferredLanguage('en');
-       
-              
+     
     }
 
     function run($http, $rootScope, $window) {
