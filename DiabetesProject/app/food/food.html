@@ -17,7 +17,7 @@
 
  <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12">
-            <h2>Add Food</h2>
+            <h2>{{'Addfood' | translate}}</h2>
 
             <div class="x_panel tile fixed_height_500">
                 <div class="row top_tiles">
@@ -37,7 +37,7 @@
                 </div>
 
                 <h1 class="panel-title" style="color:dodgerblue" align="center">
-                    <strong>Nutrition</strong>
+                    <strong>{{'Nutrition' | translate}}</strong>
                 </h1>
                 <br />
                  
@@ -45,7 +45,7 @@
                       <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left centered" method="post">
 
                     <div class="form-group">
-                        <label for="date" class="control-label col-md-3 col-sm-3 col-xs-12 form-group has-feedback">Date</label>
+                        <label for="date" class="control-label col-md-3 col-sm-3 col-xs-12 form-group has-feedback">{{'date' | translate}}</label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
                         <div class="input-group">
                             <input type="date" class="form-control" id="date" name="date" ng-model="vm.user.date" required />
@@ -57,49 +57,49 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="item_name" class="control-label col-md-3 col-sm-3 col-xs-12 form-group has-feedback">Name</label>
+                        <label for="item_name" class="control-label col-md-3 col-sm-3 col-xs-12 form-group has-feedback"> {{'Name' | translate}}</label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
                             <input type="text" class="form-control" id="item_name" name="item_name" ng-model="vm.user.item_name" required >
                     </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="serving_size_qty" class="control-label col-md-3 col-sm-3 col-xs-12 form-group has-feedback">Serving Size:</label>
+                        <label for="serving_size_qty" class="control-label col-md-3 col-sm-3 col-xs-12 form-group has-feedback">{{'ServingSize' | translate}}</label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
                             <input type="text" class="form-control" id="serving_size_qty" name="serving_size_qty" ng-model="vm.user.serving_size_qty" required >
                     </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="calories" class="control-label col-md-3 col-sm-3 col-xs-12 form-group has-feedback">Calories:</label>
+                        <label for="calories" class="control-label col-md-3 col-sm-3 col-xs-12 form-group has-feedback">{{'Calories' | translate}}</label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
                             <input type="text" class="form-control" id="calories" name="calories" ng-model="vm.user.calories" required >
                     </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="sugars" class="control-label col-md-3 col-sm-3 col-xs-12 form-group has-feedback">Sugars:</label>
+                        <label for="sugars" class="control-label col-md-3 col-sm-3 col-xs-12 form-group has-feedback">{{'Sugars' | translate}}</label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
                             <input type="text" class="form-control" id="sugars" name="sugars" ng-model="vm.user.sugars" required >
                     </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="total_fat" class="control-label col-md-3 col-sm-3 col-xs-12 form-group has-feedback">Total Fat:</label>
+                        <label for="total_fat" class="control-label col-md-3 col-sm-3 col-xs-12 form-group has-feedback">{{'TotalFat' | translate}}</label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
                             <input type="text" class="form-control" id="total_fat" name="total_fat" ng-model="vm.user.total_fat" required >
                     </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="cholesterol" class="control-label col-md-3 col-sm-3 col-xs-12 form-group has-feedback">Cholesterol:</label>
+                        <label for="cholesterol" class="control-label col-md-3 col-sm-3 col-xs-12 form-group has-feedback">{{'Cholesterol' | translate}}</label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
                             <input type="text" class="form-control" id="cholesterol" name="cholesterol" ng-model="vm.user.cholesterol1" required >
                     </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="sodium" class="control-label col-md-3 col-sm-3 col-xs-12 form-group has-feedback">sodium:</label>
+                        <label for="sodium" class="control-label col-md-3 col-sm-3 col-xs-12 form-group has-feedback"> {{'sodium' | translate}}</label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
                             <input type="text" class="form-control" id="sodium" name="sodium" ng-model="vm.user.sodium" required >
                     </div>
@@ -107,7 +107,7 @@
 
 
                     <div class="form-group">
-                        <label for="protein" class="control-label col-md-3 col-sm-3 col-xs-12 form-group has-feedback">Protein:</label>
+                        <label for="protein" class="control-label col-md-3 col-sm-3 col-xs-12 form-group has-feedback">{{'Protein' | translate}}</label>
                     <div class="col-md-6 col-sm-6 col-xs-12">
                             <input type="text" class="form-control" id="protein" name="protein" ng-model="vm.user.protein" required >
                     </div>
@@ -115,9 +115,9 @@
                     
                      <div class="form-group">
                             <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                                    <button type="submit" class="btn btn-success" ng-click="vm.saveFood()">Save</button>
-                                    <button type="reset" class="btn btn-info" ui-sref="showFood">Show Food</button>
-                                    <button type="reset" class="btn btn-danger" ng-click="vm.deselect()">Cancel</button>
+                                    <button type="submit" class="btn btn-success" ng-click="vm.saveFood()">{{'Save' | translate}}</button>
+                                    <button type="reset" class="btn btn-info" ui-sref="showFood"> {{'ShowFood' | translate}}</button>
+                                    <button type="reset" class="btn btn-danger" ng-click="vm.deselect()">{{'Cancel' | translate}}</button>
                             </div>
                     </div>
 

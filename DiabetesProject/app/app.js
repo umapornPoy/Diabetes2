@@ -1,12 +1,13 @@
 ﻿(function () {
     'use strict';
 
-    angular
-        .module('app', ['ui.router'])
+    var app = angular
+        .module('app', ['ui.router','pascalprecht.translate'])
         .config(config)
         .run(run);
 
-    function config($stateProvider, $urlRouterProvider) {
+
+    function config($stateProvider, $urlRouterProvider, $translateProvider){
         // default route
         $urlRouterProvider.otherwise("/");
 
@@ -74,7 +75,7 @@
                 controllerAs: 'vm',
                 data: { activeTab: 'Nutrition' }
             });
-
+     
     }
 
     function run($http, $rootScope, $window) {
@@ -97,6 +98,7 @@
         });
     });
 
+<<<<<<< HEAD
   function Controller(UserService) {
         var vm = this;
 
@@ -111,5 +113,12 @@
             });
         }
     }
+=======
+    app.controller('langCtrl',['$scope', '$translate', function ($scope, $translate) {
+    $scope.changeLanguage = function(key){
+      $translate.use(key);
+    };
+  }]);
+>>>>>>> f25c0efa5fcb0114afd34a239ba9621d9bdaae09
 
 })();

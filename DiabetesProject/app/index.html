@@ -30,10 +30,14 @@
 
 
 </head>
+<<<<<<< HEAD
 <body class="nav-md" ng-controller="Account.IndexController">
+=======
+<body class="nav-md">
+>>>>>>> f25c0efa5fcb0114afd34a239ba9621d9bdaae09
 
-    <div class="container body">
-        <div class="main_container">
+    <div class="container body"  ui-controller="Account.IndexController" >
+        <div class="main_container" ng-controller="langCtrl">
             <div class="col-md-3 left_col">
                 <div class="left_col scroll-view">
                     <div class="navbar nav_title" style="border: 0;">
@@ -48,7 +52,7 @@
                             <img src="../images/user-icon.png" alt="..." class="img-circle profile_img">
                         </div>
                         <div class="profile_info">
-                            <span>Welcome,</span>
+                            <span> {{ 'Welcome' | translate}},</span>
                             <h2>{{vm.user.firstname}}  {{vm.user.lastname}}</h2>
                         </div>
                     </div>
@@ -59,25 +63,25 @@
                     <!-- sidebar menu -->
                     <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
                         <div class="menu_section">
-                            <h3>General</h3>
+                            <h3>{{ 'General' | translate}}</h3>
                             <ul class="nav side-menu">
                                 <li ng-class="{active: activeTab === 'account'}">
-                                    <a ui-sref="account"><i class="fa fa-edit"></i> Edit Profile </a>
+                                    <a ui-sref="account"><i class="fa fa-edit"></i> {{ 'EditProfile' | translate}} </a>
                                 </li>
                                 <li>
-                                    <a ui-sref="record"><i class="fa fa-book"></i> Record Sugar </a>
+                                    <a ui-sref="record"><i class="fa fa-book"></i> {{ 'Recordsugar' | translate}} </a>
                                 </li>                          
                                 <li>
-                                    <a ui-sref="food"><i class="fa fa-cutlery"></i> Add Food <span class="fa fa-chevron-down"></span> </a>
+                                    <a ui-sref="food"><i class="fa fa-cutlery"></i> {{ 'Addfood' | translate}} <span class="fa fa-chevron-down"></span> </a>
                                     <ul class="nav child_menu">
-                                        <li><a ui-sref="showFood">Show Food</a></li>
+                                        <li><a ui-sref="showFood">{{ 'ShowFood' | translate}}</a></li>
                                     </ul>
                                 </li>
                                 <li>
-                                    <a ui-sref="Nutrition"><i class="fa fa-pie-chart"></i> Nutrition </a>
+                                    <a ui-sref="Nutrition"><i class="fa fa-pie-chart"></i> {{ 'Nutrition' | translate}} </a>
                                 </li>
                                 <li>
-                                    <a ui-sref="email"><i class="fa fa-share"></i> Share <span class="fa fa-chevron-down"></span></a>
+                                    <a ui-sref="email"><i class="fa fa-share"></i> {{ 'Share' | translate}} </a>
                                  <!--   <ul class="nav child_menu">
                                         <li><a href="https://www.google.com/gmail/">Gmail</a></li>
                                         <li><a href="https://th-th.facebook.com/">Facebook</a></li>
@@ -121,15 +125,16 @@
                                     <span class="fa fa-angle-down"></span>
                                 </a>
                                 <ul class="dropdown-menu dropdown-usermenu pull-right">
-                                    <li><a href="/#/EditProfile">Edit Profile</a></li>
+                                    <li><a href="/#/EditProfile">{{ 'EditProfile' | translate}}</a></li>
+                                     <!--<li translate="QUESTION"></li><button type="button" class="btn btn-info active" ng-click="changeLanguage('en')" translate="BUTTON_LANG_EN"></button><button type="button" class="btn btn-info active"ng-click="changeLanguage('es')" translate="BUTTON_LANG_ES"></button>-->
                                     <li>
-                                        <a> ChangeLanguage
+                                        <a> {{ 'Changelanguage' | translate}}
                                             <img src="../images/USA__Icon_.png" class="ng-scope" ng-click="changeLanguage('en')" translate="BUTTON_LANG_EN"/>
                                             <img src="../images/thailand_icon_sm.png"  class="ng-scope" ng-click="changeLanguage('th')" translate="BUTTON_LANG_TH"/>
                                         </a>
                                     </li>
 
-                                    <li><a href="/login" target="_self"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                                    <li><a href="/login" target="_self"><i class="fa fa-sign-out pull-right"></i>{{ 'Logout' | translate}}</a></li>
                                 </ul>
                             </li>
                         </ul>
@@ -191,12 +196,26 @@
 
     <!-- external scripts -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script> 
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+<<<<<<< HEAD
 
+=======
+    
+<<<<<<< HEAD
+    
+=======
+>>>>>>> f25c0efa5fcb0114afd34a239ba9621d9bdaae09
 
+>>>>>>> 1645a21bbc8bb12df48343ef63b694fb2168d244
     <!-- application scripts -->
     <script src="app.js"></script>
+    <script src="translate/translate.js"></script>
+    
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-translate/2.7.2/angular-translate.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-sanitize.js"></script>
+   
     <script src="app-services/user.service.js"></script>
     <script src="app-services/flash.service.js"></script>
     <script src="home/index.controller.js"></script>

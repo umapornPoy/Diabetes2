@@ -20,7 +20,7 @@
     <div class="x_panel">
                 <div class="x_title">
                     <h2>
-                        <strong>Edit Profile</strong>
+                        <strong>{{'EditProfile' | translate }}</strong>
                     </h2>
                     <div class="clearfix"></div>
                 </div>
@@ -28,31 +28,31 @@
 <div class="x_content">
     <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left centered" method="post">
         <div class="form-group">
-            <label for="username" class="control-label col-md-3 col-sm-3 col-xs-12 form-group has-feedback">Username</label>
+            <label for="username" class="control-label col-md-3 col-sm-3 col-xs-12 form-group has-feedback"> {{'Username' | translate }}</label>
             <div class="col-md-6 col-sm-6 col-xs-12">
             <input type="text" name="username" id="username" class="form-control" ng-model="vm.user.username" required />
             </div>
         </div>
         <div class="form-group">
-            <label for="password" class="control-label col-md-3 col-sm-3 col-xs-12 form-group has-feedback">Password</label>
+            <label for="password" class="control-label col-md-3 col-sm-3 col-xs-12 form-group has-feedback">{{'password' | translate }}</label>
             <div class="col-md-6 col-sm-6 col-xs-12">
             <input type="password" name="password" id="password" class="form-control" ng-model="vm.user.password" required />
             </div>
         </div>
         <div class="form-group">
-            <label for="confirm" class="control-label col-md-3 col-sm-3 col-xs-12 form-group has-feedback">Confirm Password</label>
+            <label for="confirm" class="control-label col-md-3 col-sm-3 col-xs-12 form-group has-feedback"> {{'Confirmpassword' | translate }}</label>
             <div class="col-md-6 col-sm-6 col-xs-12">
             <input type="password" name="confirm" id="confirm" class="form-control" ng-model="vm.user.confirm" required />
             </div>
         </div>
         <div class="form-group">
-            <label for="firstname" class="control-label col-md-3 col-sm-3 col-xs-12 form-group has-feedback">Firstname</label>
+            <label for="firstname" class="control-label col-md-3 col-sm-3 col-xs-12 form-group has-feedback"> {{'Firstname' | translate }}</label>
             <div class="col-md-6 col-sm-6 col-xs-12">
             <input type="text" name="firstname" id="firstname" class="form-control" ng-model="vm.user.firstname" />
             </div>
         </div>
         <div class="form-group">
-            <label for="lastname" class="control-label col-md-3 col-sm-3 col-xs-12 form-group has-feedback">Lastname</label>
+            <label for="lastname" class="control-label col-md-3 col-sm-3 col-xs-12 form-group has-feedback">{{'Lastname' | translate }}</label>
             <div class="col-md-6 col-sm-6 col-xs-12">
             <input type="text" name="lastname" id="lastname" class="form-control" ng-model="vm.user.lastname" />
             </div>
@@ -61,23 +61,23 @@
 
                                 <div class="form-group">
                                     <label for="gender" class="control-label col-md-3 col-sm-3 col-xs-12">
-                                        Gender
+                                         {{'Gender' | translate }}
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         <p>
                                             <input class="flat iradio_flat-green" type="radio"
                                                    value="Male" name="gender" ng-model="vm.user.gender" />
-                                            Male
+                                             {{'Male' | translate }}
                                             <input class="flat iradio_flat-green" type="radio"
                                                     value="Female" name="gender" ng-model="vm.user.gender"/>
-                                            Female
-                                        </p>
+                                             {{'Female' | translate }}
+                                        </p> 
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label for="email" class="control-label col-md-3 col-sm-3 col-xs-12">
-                                        Email
+                                         {{'Email' | translate }}
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         <input type="email" class="form-control has-feedback-left" id="email" placeholder="example@email.com" required="required" name="email" ng-model="vm.user.email">
@@ -87,7 +87,7 @@
 
                                 <div class="form-group">
                                     <label for="age" class="control-label col-md-3 col-sm-3 col-xs-12">
-                                        Age
+                                         {{'Age' | translate }}
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         <input type="text" id="age" required="required" class="form-control col-md-7 col-xs-12" name="age" ng-model="vm.user.age">
@@ -96,13 +96,13 @@
 
                                 <div class="form-group">
                                     <label class="control-label col-md-3 col-sm-3 col-xs-6" for="weight">
-                                        Weight
+                                         {{'Weight' | translate }}
                                     </label>
                                     <div class="col-md-2 col-sm-3 col-xs-6">
                                         <input type="text" id="lastname" required="required" class="form-control col-md-2 col-xs-6" name="weight" ng-model="vm.user.weight">
                                     </div>
                                     <label class="control-label col-md-1 col-sm-1 col-xs-6" for="height">
-                                        Height
+                                         {{'Height' | translate }}
                                     </label>
                                     <div class="col-md-2 col-sm-3 col-xs-6">
                                         <input type="text" id="lastname" required="required" class="form-control col-md-2 col-xs-6" name="height" ng-model="vm.user.height">
@@ -111,61 +111,61 @@
 
                                 <div class="form-group">
                                     <label class="control-label col-md-3 col-sm-3 col-xs-12">
-                                        Type
+                                         {{'Type' | translate }}
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         <select class="form-control" name="type" ng-model="vm.user.type">
-                                            <option value="">Select Type</option>
-                                            <option value="insulin">insulin</option>
-                                            <option value="Not insulin">Not insulin</option>
+                                            <option value=""> {{'Selecttype' | translate }}</option>
+                                            <option value="insulin"> {{'insulin' | translate }}</option>
+                                            <option value="Not insulin"> {{'notinsulin' | translate }}</option>
                                         </select>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="control-label col-md-3 col-sm-3 col-xs-12">
-                                        Complication
+                                         {{'Complication' | translate }}
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         <select class="form-control" name="complication" ng-model="vm.user.comlication">
-                                            <option value="">Select Complication</option>
-                                            <option value="No Complication">No Complication</option>
-                                            <option value="retinopathy">retinopathy</option>
-                                            <option value="nephropathy">nephropathy</option>
-                                            <option value="neuropathy">neuropathy</option>
-                                            <option value="Diabetic ulcer">Diabetic ulcer</option>
-                                            <option value="Diabetic foot">Diabetic foot</option>
+                                            <option value="">{{'SelectComplication' | translate }}</option>
+                                            <option value="No Complication"> {{'NoComplication' | translate }}</option>
+                                            <option value="retinopathy"> {{'retinopathy' | translate }}</option>
+                                            <option value="nephropathy"> {{'nephropathy' | translate }}</option>
+                                            <option value="neuropathy">{{'neuropathy' | translate }}</option>
+                                            <option value="Diabetic ulcer"> {{'DiabeticUlcer' | translate }}</option>
+                                            <option value="Diabetic foot"> {{'DiabeticFoot' | translate }}</option>
                                         </select>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="control-label col-md-3 col-sm-3 col-xs-12">
-                                        Disease
+                                         {{'Disease' | translate }}
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         <select class="form-control" name="disease" ng-model="vm.user.disease">
-                                            <option value="">Select Disease</option>
-                                            <option value="No Disease">No Disease</option>
-                                            <option value="Cardiovascular Disease">Cardiovascular Disease</option>
-                                            <option value="High blood pressure">High blood pressure</option>
-                                            <option value="kidney disease">kidney disease</option>
-                                            <option value="peripheral neuropathy Disease">peripheral neuropathy Disease</option>
-                                            <option value="Eye disease">Eye disease</option>
+                                            <option value=""> {{'SelectDisease' | translate }}</option>
+                                            <option value="No Disease">{{'NoDisease ' | translate }}</option>
+                                            <option value="Cardiovascular Disease">{{'CardiovascularDisease ' | translate }}</option>
+                                            <option value="High blood pressure">{{'HighBloodPressure ' | translate }}</option>
+                                            <option value="kidney disease"> {{'kidneyDisease' | translate }}</option>
+                                            <option value="peripheral neuropathy Disease"> {{'peripheralNeuropathyDisease' | translate }} 
+                                            <option value="Eye disease">{{'EyeDisease ' | translate }}</option>
                                         </select>
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="control-label col-md-3 col-sm-3 col-xs-12">
-                                        Drug allergy
+                                         {{'DrugAllergy' | translate }}
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         <p>
                                             <input class="flat iradio_flat-green" type="radio"
-                                                    value="Yes" name="dragallergy" ng-model="vm.user.dragallergy"> Yes
+                                                    value="Yes" name="dragallergy" ng-model="vm.user.dragallergy">  {{'Yes' | translate }}
                                             <input class="flat iradio_flat-green" type="radio"
-                                                    value="No" name="dragallergy" ng-model="vm.user.dragallergy"> No
+                                                    value="No" name="dragallergy" ng-model="vm.user.dragallergy"> {{'No' | translate }}
                                         </p>
                                     </div>
                                 </div>
@@ -173,7 +173,7 @@
 
                                <div class="form-group">
                                     <label  class="control-label col-md-3 col-sm-3 col-xs-12">
-                                        Email Doctor
+                                         {{'EmailDoctor' | translate }}
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         <input type="email" class="form-control has-feedback-left" id="emaildoctor" placeholder="example@email.com" required="required" name="emaildoctor" ng-model="vm.user.emaildoctor">
@@ -184,8 +184,8 @@
 
         <div class="form-group">
         <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-            <button class="btn btn-primary pull-right" ng-click="vm.saveUser()">Save</button>
-            <button class="btn btn-danger pull-right" ng-click="vm.deleteUser()">Delete</button>
+            <button class="btn btn-primary pull-right" ng-click="vm.saveUser()"> {{'Save' | translate }}</button>
+            <button class="btn btn-danger pull-right" ng-click="vm.deleteUser()"> {{'Delete' | translate }}</button>
             </div>
         </div>
     </form>

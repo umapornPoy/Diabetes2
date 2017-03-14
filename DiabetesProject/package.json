@@ -39,5 +39,12 @@
   "mongoskin": "^2.1.0",
   "q": "^1.4.1",
   "request": "^2.58.0",
+<<<<<<< HEAD
+  "rootpath": "^0.1.2",
+  "devDependencies": {
+  "angular-translate": "^2.15.1"
+  }
+=======
   "rootpath": "^0.1.2"
+>>>>>>> 1645a21bbc8bb12df48343ef63b694fb2168d244
 }
