@@ -98,10 +98,6 @@
         });
     });
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 3183d8833b6e31abdda54dbda156787e72b0d112
   function Controller(UserService) {
         var vm = this;
 
