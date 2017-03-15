@@ -11,13 +11,11 @@ var path = require('path');
 var path = require('path');
 
 
-
+var nodemailer = require("nodemailer");
+var smtpTransport = require("nodemailer-smtp-transport");
 
 var path = require('path');
 
-
-var nodemailer = require("nodemailer");
-var smtpTransport = require("nodemailer-smtp-transport");
 
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
