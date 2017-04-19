@@ -7,6 +7,7 @@
 
     function Controller($window, UserService, FlashService, $scope) {  
 
+
         var date = new Date();
         console.log(date);
 
@@ -21,17 +22,18 @@
 
         console.log(day+"/"+month+"/"+year);
 
-
-
-
         var vm = this;
 
+        var refresh = function() {
         vm.user = null;
+        };
+
         vm.saveUser = saveUser;
         vm.deleteUser = deleteUser;
         vm.deselect = deselect;
         vm.saveRecord = saveRecord;
         vm.saveFood = saveFood;
+        
 
         initController();
 
@@ -52,6 +54,9 @@
 
             });
         }
+
+
+refresh();
 
         function saveUser() {
             UserService.Update(vm.user)
@@ -106,9 +111,7 @@
                 });
         }
 
-
     }
-
 
 
 })();

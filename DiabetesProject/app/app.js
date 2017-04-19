@@ -36,7 +36,7 @@
             .state('chart', {
                 url: '/chart',
                 templateUrl: 'record/chart.html',
-                //controller: 'LineCtrl',
+                controller: 'Account.IndexController',
                 controllerAs: 'vm',
                 data: { activeTab: 'chart' }
             })
@@ -112,6 +112,8 @@
         });
     });
 
+<<<<<<< HEAD
+=======
   function Controller(UserService) {
         var vm = this;
 
@@ -126,6 +128,7 @@
             });
         }
     }
+>>>>>>> 56ed4c8ff30334a956bcf5a2826018ee9096ae07
 
     app.controller('langCtrl',['$scope', '$translate', function ($scope, $translate) {
     $scope.changeLanguage = function(key){

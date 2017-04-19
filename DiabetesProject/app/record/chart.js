@@ -1,29 +1,30 @@
+<<<<<<< HEAD
+
+$(document).ready(function() {
+=======
 google.charts.load('current', {packages: ['corechart', 'line']});
 google.charts.setOnLoadCallback(drawBasic);
+>>>>>>> 56ed4c8ff30334a956bcf5a2826018ee9096ae07
 
-function drawBasic() {
+        Morris.Line({
+          element: 'graph_line',
+          xkey: 'year',
+          ykeys: ['value'],
+          labels: ['Value'],
+          hideHover: 'auto',
+          lineColors: ['#26B99A', '#34495E', '#ACADAC', '#3498DB'],
+          data: [
+            {year: '2012', value: 20},
+            {year: '2013', value: 10},
+            {year: '2014', value: 5},
+            {year: '2015', value: 5},
+            {year: '2016', value: 20}
+          ],
+          resize: true
+        });
 
-      var data = new google.visualization.DataTable();
-      data.addColumn('number', 'X');
-      data.addColumn('number', 'Sugar blood');
-
-      data.addRows([
-        [0, 0],   [1, 10],  [2, 23],  [3, 17],  [4, 18],  [5, 9],
-        [6, 11],  [7, 27],  [8, 33],  [9, 40],  [10, 32], [11, 35],
-        [12, 30], [13, 40], [14, 42], [15, 47], [16, 44], [17, 48]
-        
-      ]);
-
-      var options = {
-        hAxis: {
-          title: 'Time'
-        },
-        vAxis: {
-          title: 'Sugar blood'
-        }
-      };
-
-      var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
-
-      chart.draw(data, options);
-    }
+        $MENU_TOGGLE.on('click', function() {
+          $(window).resize();
+        });
+      });
+  
