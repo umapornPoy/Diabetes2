@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 
 $(document).ready(function() {
+=======
+google.charts.load('current', {packages: ['corechart', 'line']});
+google.charts.setOnLoadCallback(drawBasic);
+>>>>>>> 56ed4c8ff30334a956bcf5a2826018ee9096ae07
 
         Morris.Line({
           element: 'graph_line',

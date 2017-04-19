@@ -98,6 +98,23 @@
         });
     });
 
+<<<<<<< HEAD
+=======
+  function Controller(UserService) {
+        var vm = this;
+
+        vm.user = null;
+
+        initController();
+
+        function initController() {
+            // get current user
+            UserService.GetCurrent().then(function (user) {
+                vm.user = user;
+            });
+        }
+    }
+>>>>>>> 56ed4c8ff30334a956bcf5a2826018ee9096ae07
 
     app.controller('langCtrl',['$scope', '$translate', function ($scope, $translate) {
     $scope.changeLanguage = function(key){

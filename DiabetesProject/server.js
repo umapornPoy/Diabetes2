@@ -6,14 +6,23 @@ var bodyParser = require('body-parser');
 var expressJwt = require('express-jwt');
 var config = require('config.json');
 
+<<<<<<< HEAD
 var Quagga = require('quagga').default;
 
 var path = require('path')
 
+=======
+var path = require('path');
+
+var path = require('path');
+>>>>>>> 56ed4c8ff30334a956bcf5a2826018ee9096ae07
 
 
 var nodemailer = require("nodemailer");
 var smtpTransport = require("nodemailer-smtp-transport");
+
+var path = require('path');
+
 
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
@@ -62,6 +71,7 @@ var smtpTransport = nodemailer.createTransport({
 app.get('/',function(req,res){
     res.sendFile(__dirname + '/index.html');
 });
+
 app.get('/send',function(req,res){
     var mailOptions={
         
