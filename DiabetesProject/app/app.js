@@ -36,7 +36,7 @@
             .state('chart', {
                 url: '/chart',
                 templateUrl: 'record/chart.html',
-                //controller: 'LineCtrl',
+                controller: 'Account.IndexController',
                 controllerAs: 'vm',
                 data: { activeTab: 'chart' }
             })
@@ -98,24 +98,6 @@
         });
     });
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 3183d8833b6e31abdda54dbda156787e72b0d112
-  function Controller(UserService) {
-        var vm = this;
-
-        vm.user = null;
-
-        initController();
-
-        function initController() {
-            // get current user
-            UserService.GetCurrent().then(function (user) {
-                vm.user = user;
-            });
-        }
-    }
 
     app.controller('langCtrl',['$scope', '$translate', function ($scope, $translate) {
     $scope.changeLanguage = function(key){
