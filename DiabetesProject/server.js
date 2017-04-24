@@ -7,11 +7,11 @@ var expressJwt = require('express-jwt');
 var config = require('config.json');
 
 
-var nodemailer = require("nodemailer");
-var smtpTransport = require("nodemailer-smtp-transport");
-
 var path = require('path');
 
+
+var nodemailer = require("nodemailer");
+var smtpTransport = require("nodemailer-smtp-transport");
 
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
@@ -34,6 +34,8 @@ app.use('/app', require('./controllers/app.controller'));
 app.use('/api/users', require('./controllers/api/users.controller')); // localhost:3000/api/users/ => ./controllers/api/users.controller
 app.use('/record', require('./controllers/record.controller'));
 app.use('/food', require('./controllers/food.controller'));
+app.use('/email', require('./controllers/app.controller'));
+
 
 // make '/app' default route
 app.get('/', function (req, res) {
@@ -50,7 +52,7 @@ var smtpTransport = nodemailer.createTransport({
     host: "smtp.gmail.com",
     auth: {
         user: "diabetecares@gmail.com",
-        pass: "admin-care"
+        pass: "diabetecares"
     }
 });
 /*------------------SMTP Over-----------------------------*/
@@ -60,7 +62,6 @@ var smtpTransport = nodemailer.createTransport({
 app.get('/',function(req,res){
     res.sendFile(__dirname + '/index.html');
 });
-
 app.get('/send',function(req,res){
     var mailOptions={
         
