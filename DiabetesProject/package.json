@@ -20,6 +20,11 @@
     "lodash": "^3.10.1",
     "mongodb": "^2.2.24",
     "mongoskin": "^2.1.0",
+<<<<<<< HEAD
+    "nodemailer": "^3.1.7",
+    "nodemailer-smtp-transport": "^2.7.2",
+=======
+>>>>>>> 5fa0d712058cf21b07e02b2ce235b95c9ab63e05
     "q": "^1.4.1",
     "request": "^2.81.0",
     "rootpath": "^0.1.2"
@@ -43,6 +48,3 @@
   "angular-translate": "^2.15.1"
   }
 }
-
-+>>>>>>> d7f5645e582a6a9a11be255777d974e8d1d40d0b
- }

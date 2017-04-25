@@ -5,7 +5,9 @@
         .module('app')
         .controller('Account.IndexController', Controller);
 
-    function Controller($window, UserService, FlashService, $scope) {  
+    function Controller($window, UserService, FlashService, $scope, $filter) {  
+
+   
 
 
         var date = new Date();
@@ -24,11 +26,13 @@
 
         var vm = this;
 
-        var refresh = function() {
         vm.user = null;
+<<<<<<< HEAD
          
 
         };
+=======
+>>>>>>> 6d77f7bb812f780fece9e22425ad7591713e7eb3
 
         vm.saveUser = saveUser;
         vm.deleteUser = deleteUser;
@@ -71,7 +75,6 @@
         }
 
 
-refresh();
 
         function saveUser() {
             UserService.Update(vm.user)
@@ -86,6 +89,8 @@ refresh();
         }
 
          function saveRecord() {
+
+
             UserService.Record(vm.user)
                 .then(function () {
                     FlashService.Success('Add Record');

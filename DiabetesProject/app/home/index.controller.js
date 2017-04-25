@@ -5,7 +5,7 @@
         .module('app')
         .controller('Home.IndexController', Controller);
 
-    function Controller(UserService) {
+    function Controller(UserService, $timeout) {
 
         var vm = this;
 
@@ -14,13 +14,39 @@
         initController();
 
         function initController() {
+
+            var dataList = [];
             // get current user
+
+
+<<<<<<< HEAD
             UserService.GetCurrent().then(function (user) {
+
                 vm.user = user;
-                console.log(user);
+                dataList = [];
+                for (var i = 0; i < user.record.length; i++) {
+
+//length -6   
+
+                    var data = { day1: String = user.record[i].date, 
+                        sugarblood: parseInt(user.record[i].sugarblood), 
+                        cholesterol: parseInt(user.record[i].cholesterol), 
+                        weight1: parseInt(user.record[i].weight1) }
+                    dataList.push(data);
+                    console.log(dataList)
+                }
+                var chart = {
+                    element: "chart",
+                    data: dataList,
+                    xkey: "day1",
+                    ykeys: ["sugarblood", "cholesterol", "weight1"],
+                    lineColors: ['#FF0000', '#6A5ACD', '#2E8B57'],
+                    pointFillColors: ['#8B0000', '#483D8B', '#228B22'],
+                    labels: ["sugarblood", "cholesterol", "weight"]
+                };
+                new Morris.Line(chart);
             });
-
-
+=======
       $(document).ready(function() {
         //random data
         var d1 = [
@@ -78,7 +104,9 @@
         }], options);
       });
   
+>>>>>>> 5fa0d712058cf21b07e02b2ce235b95c9ab63e05
         }
 
-       }
+    }
+
 })();

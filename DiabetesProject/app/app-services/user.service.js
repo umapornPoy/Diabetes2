@@ -23,6 +23,7 @@
         function GetCurrent() {
             return $http.get('/api/users/current').then(handleSuccess, handleError);
         }
+        
 
         function GetAll() {
             return $http.get('/api/users').then(handleSuccess, handleError);
