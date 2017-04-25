@@ -9,7 +9,6 @@ var config = require('config.json');
 
 var path = require('path');
 
-
 var nodemailer = require("nodemailer");
 var smtpTransport = require("nodemailer-smtp-transport");
 
@@ -51,8 +50,8 @@ var smtpTransport = nodemailer.createTransport({
     service: "gmail",
     host: "smtp.gmail.com",
     auth: {
-        user: "diabetecares@gmail.com",
-        pass: "diabetecares"
+        user: "rattanaporn.fahh@gmail.com",
+        pass: "076323710"
     }
 });
 /*------------------SMTP Over-----------------------------*/
