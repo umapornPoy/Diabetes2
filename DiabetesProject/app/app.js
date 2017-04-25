@@ -47,6 +47,20 @@
                 controllerAs: 'vm',
                 data: { activeTab: 'email' }
             })
+             .state('progressbar', {
+                url: '/progressbar',
+                templateUrl: 'email/progressbar.html',
+                controller: 'Account.IndexController',
+                controllerAs: 'vm',
+                data: { activeTab: 'progressbar' }
+            })
+              .state('nutrientsprogress', {
+                url: '/nutrientsprogress',
+                templateUrl: 'email/nutrientsprogress.html',
+                controller: 'Account.IndexController',
+                controllerAs: 'vm',
+                data: { activeTab: 'nutrientsprogress' }
+            })
             .state('food', {
                 url: '/food',
                 templateUrl: 'food/food.html',

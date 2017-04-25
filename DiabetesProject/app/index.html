@@ -4,15 +4,12 @@
 <head>
     <meta charset="utf-8" />
     <title>Diabetes Care Web Application</title>
-
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" />
     <link href="app-content/app.css" rel="stylesheet" />
-
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- Bootstrap -->
     <link href="../template/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -29,13 +26,24 @@
     <!-- Custom Theme Style -->
     <link href="../template/build/css/custom.min.css" rel="stylesheet">
 
-
 </head>
 
 <body class="nav-md" ng-controller="Account.IndexController">
+<<<<<<< HEAD
 
 
     <body class="nav-md">
+=======
+    <div class="container body" ui-controller="Account.IndexController" >
+        <div class="main_container" ng-controller="langCtrl">
+            <div class="col-md-3 left_col">
+                <div class="left_col scroll-view">
+                    <div class="navbar nav_title" style="border: 0;">
+                       <li  ng-class="{active: activeTab === 'home'}"> <a ui-sref="home" class="site_title"><i class="fa fa-medkit"></i> <span>Diabetes Care</span></a></li>
+                    </div>
+
+                    <div class="clearfix"></div>
+>>>>>>> 5fa0d712058cf21b07e02b2ce235b95c9ab63e05
 
         <div class="container body" ui-controller="Account.IndexController">
             <div class="main_container" ng-controller="langCtrl">
@@ -91,6 +99,7 @@
                                 </ul>
                             </div>
                         </div>
+<<<<<<< HEAD
                         <!-- /sidebar menu -->
                         <!-- /menu footer buttons -->
                         <!--  <div class="sidebar-footer hidden-small">
@@ -108,6 +117,8 @@
                             </a>
                         </div>
                     <!-- /menu footer buttons -->
+=======
+>>>>>>> 5fa0d712058cf21b07e02b2ce235b95c9ab63e05
                     </div>
                 </div>
 
@@ -142,7 +153,12 @@
                         </nav>
                     </div>
                 </div>
+<<<<<<< HEAD
             </div>
+=======
+        </div>
+    
+>>>>>>> 5fa0d712058cf21b07e02b2ce235b95c9ab63e05
 
 
             <!--<nav class="navbar navbar-default" role="navigation">
@@ -186,6 +202,7 @@
                 <div class="x_content" ui-view></div>
 
             </div>
+<<<<<<< HEAD
 
             <!-- footer -->
             <footer>
@@ -287,5 +304,127 @@
             </script>
 
     </body>
+=======
+       
+    <!-- footer -->
+            <footer>
+                <div class="pull-right">
+                            Diabetes Care : An Application of Mobile OCR for medical record tracking in diabetes 
+                        </div>
+                        <div class="clearfix"></div>
+            </footer>
+           
+        
+      </div>
+</div>
+
+    
+    
+
+    <!-- external scripts -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script> 
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+
+    <!-- application scripts -->
+    <script src="app.js"></script>
+    <script src="translate/translate.js"></script>
+    
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-translate/2.7.2/angular-translate.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-sanitize.js"></script>
+   
+    <script src="app-services/user.service.js"></script>
+    <script src="app-services/flash.service.js"></script>
+    <script src="home/index.controller.js"></script>
+    <script src="account/index.controller.js"></script>
+
+
+
+
+    <script src="../template/vendors/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="../template/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- FastClick -->
+    <script src="../template/vendors/fastclick/lib/fastclick.js"></script>
+    <!-- NProgress -->
+    <script src="../template/vendors/nprogress/nprogress.js"></script>
+    <!-- Chart.js -->
+    <script src="../template/vendors/Chart.js/dist/Chart.min.js"></script>
+    <!-- gauge.js -->
+    <script src="../template/vendors/gauge.js/dist/gauge.min.js"></script>
+    <!-- bootstrap-progressbar -->
+    <script src="../template/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- iCheck -->
+    <script src="../template/vendors/iCheck/icheck.min.js"></script>
+    <!-- Skycons -->
+    <script src="../template/vendors/skycons/skycons.js"></script>
+    <!-- Flot -->
+    <script src="../template/vendors/Flot/jquery.flot.js"></script>
+    <script src="../template/vendors/Flot/jquery.flot.pie.js"></script>
+    <script src="../template/vendors/Flot/jquery.flot.time.js"></script>
+    <script src="../template/vendors/Flot/jquery.flot.stack.js"></script>
+    <script src="../template/vendors/Flot/jquery.flot.resize.js"></script>
+    <!-- Flot plugins -->
+    <script src="../template/vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+    <script src="../template/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+    <script src="../template/vendors/flot.curvedlines/curvedLines.js"></script>
+    <!-- DateJS -->
+    <script src="../template/vendors/DateJS/build/date.js"></script>
+    <!-- JQVMap -->
+    <script src="../template/vendors/jqvmap/dist/jquery.vmap.js"></script>
+    <script src="../template/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <script src="../template/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+
+    <!-- Custom Theme Scripts -->
+    <script src="../template/build/js/custom.min.js"></script>
+
+     <!-- DateJS -->
+    <script src="../template/vendors/DateJS/build/date.js"></script>
+
+
+    <!-- morris.js -->
+    <script src="/template/vendors/raphael/raphael.min.js"></script>
+    <script src="/template/vendors/morris.js/morris.min.js"></script>
+
+
+<script>
+
+    function Controller(UserService) {
+        var vm = this;
+
+        vm.user = null;
+
+        initController();
+
+        function initController() {
+            // get current user
+            UserService.GetCurrent().then(function (user) {
+                vm.user = user;
+            });
+        }
+    }
+
+</script>
+  <script>// <![CDATA[
+  $(document).ready(function(){
+      var from,to,subject,text,from;
+      $("#send_email").click(function(){      
+          to=$("#to").val();
+          subject=$("#subject").val();
+          text=$("#content").val();
+          $("#message").text("Sending E-mail...Please wait");
+          $.get("http://localhost:3000/send",{to:to,subject:subject,text:text},function(data){
+          if(data=="sent")
+          {
+              $("#message").empty().html("Email is been sent at "+to+"");
+          }
+
+  });
+      });
+  });
+  </script>
+
+>>>>>>> 5fa0d712058cf21b07e02b2ce235b95c9ab63e05
 
 </html>

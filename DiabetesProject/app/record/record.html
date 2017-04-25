@@ -11,11 +11,11 @@
         height: 375px;
         background-color: #666;
     }
-
-    #table {
-        text-align: center;
+    .table{
+        font-size:12px
     }
-    
+
+   
 </style>
 
     <div class="main_container">
@@ -23,7 +23,7 @@
             <div class="">
                 <div class="page-title">
                     <div class="title_left">
-                        <h3> {{'SymptomsDiabetes' | translate}}</h3>
+                        <h4> {{'SymptomsDiabetes' | translate}}</h4>
                     </div>
                 </div>
                 <div class="clearfix"></div>
@@ -154,26 +154,28 @@
                     </div>
                     <div class="x_content">
                         <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                            <div class="panel-body">
-                                <table class="table table-striped">
-                                    <thead id="table" bgcolor="#00e6ac">
-                                        <tr>
-                                            <th>{{'SugarmgdL' | translate}} </th>
-                                            <th>{{' BloodpressureMmHg' | translate}} </th>
-                                            <th>{{'CholesterolmgdL' | translate}} </th>
-                                            <th>{{'Weightkg' | translate}} </th>
-                                        </tr>
+                            
+                       <div class="container">
+                                <table class="table">
+                                    <thead bgcolor="#00e6ac">
+                                      <tr>
+                                        <th>{{'SugarmgdL' | translate}} </th>
+                                        <th>{{'BloodpressureMmHg' | translate}}</th>
+                                        <th>{{'CholesterolmgdL' | translate}} </th>
+                                        <th>{{'Weightkg' | translate}} </th>
+                                      </tr>
                                     </thead>
                                     <tbody>
-                                        <tr ng-repeat="records in vm.user.record">
-                                            <td>{{records.sugarblood}} </td>
+                                      <tr ng-repeat="records in vm.user.record">
+                                         <td>{{records.sugarblood}}</td>
                                             <td>{{records.bloodpressure}}</td>
                                             <td>{{records.cholesterol}}</td>
                                             <td>{{records.weight1}}</td>
-                                        </tr>
+                                      </tr>
                                     </tbody>
-                                </table>
-                            </div>
+                                  </table>
+                          </div>
+
                         </div>
                       
                     </div>
