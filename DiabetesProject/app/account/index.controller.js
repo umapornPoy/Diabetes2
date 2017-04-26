@@ -27,22 +27,41 @@
         var vm = this;
 
         vm.user = null;
+<<<<<<< HEAD
+         
+
+        };
+=======
+>>>>>>> 6d77f7bb812f780fece9e22425ad7591713e7eb3
 
         vm.saveUser = saveUser;
         vm.deleteUser = deleteUser;
         vm.deselect = deselect;
         vm.saveRecord = saveRecord;
         vm.saveFood = saveFood;
-        
+   
 
         initController();
 
         function initController() {
             // get current user
+            var dataList = [];
+
             UserService.GetCurrent().then(function (user) {
                 vm.user = user;
-                vm.user.sugarblood = localStorage.getItem('texts');
+                
+                for (var i = 0; i < user.record.length; i++) {
+                    var data = { sugarblood: user.record[i].sugarblood};
+                    dataList.push(data);       
+                }  
+                 
+             $scope.bloodInt = dataList[(dataList.length -1 )].sugarblood;
+                $scope.sugarProgress =  parseFloat(($scope.bloodInt/140)*100).toFixed(2);
 
+               
+                  
+            
+                
                 vm.user.item_name = localStorage.getItem('item_name');
                 vm.user.serving_size_qty = localStorage.getItem('serving_size_qty');
                 vm.user.calories = localStorage.getItem('calories');
@@ -66,6 +85,7 @@
                     FlashService.Error(error);
                 });
                 refresh();
+
         }
 
          function saveRecord() {
@@ -79,18 +99,20 @@
                     FlashService.Error(error);
                 });
                 refresh();
+
         }  
 
           function saveFood() {
             UserService.Food(vm.user)
                 .then(function () {
                     FlashService.Success('Add Food');
+
                 })
                 .catch(function (error) {
                     FlashService.Error(error);
                 });
                 refresh();
-        }  
+        }
 
 
         function deselect() {
@@ -111,7 +133,6 @@
                     FlashService.Error(error);
                 });
         }
-
     }
 
 

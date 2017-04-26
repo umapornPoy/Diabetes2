@@ -260,9 +260,39 @@
                 });
             }
         }
+<<<<<<< HEAD
 
     </script>
 
 </body>
+=======
+    }
 
+<<<<<<< HEAD
+</body>
+=======
+</script>
+  <script>// <![CDATA[
+  $(document).ready(function(){
+      var from,to,subject,text,from;
+      $("#send_email").click(function(){      
+          to=$("#to").val();
+          subject=$("#subject").val();
+          text=$("#content").val();
+          $("#message").text("Sending E-mail...Please wait");
+          $.get("http://localhost:3000/send",{to:to,subject:subject,text:text},function(data){
+          if(data=="sent")
+          {
+              $("#message").empty().html("Email is been sent at "+to+"");
+          }
+
+  });
+      });
+  });
+  </script>
+
+>>>>>>> 5fa0d712058cf21b07e02b2ce235b95c9ab63e05
+>>>>>>> b6dc671a03238f3285724cac948608110623f411
+
+>>>>>>> 6d77f7bb812f780fece9e22425ad7591713e7eb3
 </html>
