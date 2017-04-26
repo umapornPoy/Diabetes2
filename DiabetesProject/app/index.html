@@ -1,4 +1,4 @@
-<!DOCTYPE>
+
 <html ui-app="app">
 
 <head>
@@ -29,136 +29,95 @@
 </head>
 
 <body class="nav-md" ng-controller="Account.IndexController">
-<<<<<<< HEAD
-
-
-    <body class="nav-md">
-=======
-    <div class="container body" ui-controller="Account.IndexController" >
+    <div class="container body" ui-controller="Account.IndexController">
         <div class="main_container" ng-controller="langCtrl">
             <div class="col-md-3 left_col">
                 <div class="left_col scroll-view">
                     <div class="navbar nav_title" style="border: 0;">
-                       <li  ng-class="{active: activeTab === 'home'}"> <a ui-sref="home" class="site_title"><i class="fa fa-medkit"></i> <span>Diabetes Care</span></a></li>
+                        <li ng-class="{active: activeTab === 'home'}"> <a ui-sref="home" class="site_title"><i class="fa fa-medkit"></i> <span>Diabetes Care</span></a></li>
                     </div>
 
                     <div class="clearfix"></div>
->>>>>>> 5fa0d712058cf21b07e02b2ce235b95c9ab63e05
 
-        <div class="container body" ui-controller="Account.IndexController">
-            <div class="main_container" ng-controller="langCtrl">
-                <div class="col-md-3 left_col">
-                    <div class="left_col scroll-view">
-                        <div class="navbar nav_title" style="border: 0;">
-                            <li ng-class="{active: activeTab === 'home'}"> <a ui-sref="home" class="site_title"><i class="fa fa-medkit"></i> <span>Diabetes Care</span></a></li>
+                    <!-- menu profile quick info -->
+                    <div class="profile">
+                        <div class="profile_pic">
+                            <img src="../images/user-icon.png" alt="..." class="img-circle profile_img">
                         </div>
-
-                        <div class="clearfix"></div>
-
-                        <!-- menu profile quick info -->
-                        <div class="profile">
-                            <div class="profile_pic">
-                                <img src="../images/user-icon.png" alt="..." class="img-circle profile_img">
-                            </div>
-                            <div class="profile_info">
-                                <span> {{ 'Welcome' | translate}},</span>
-                                <h2>{{vm.user.firstname}} {{vm.user.lastname}}</h2>
-                            </div>
+                        <div class="profile_info">
+                            <span> {{ 'Welcome' | translate}},</span>
+                            <h2>{{vm.user.firstname}} {{vm.user.lastname}}</h2>
                         </div>
-                        <!-- /menu profile quick info -->
+                    </div>
+                    <!-- /menu profile quick info -->
 
-                        <br />
+                    <br />
 
-                        <!-- sidebar menu -->
-                        <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
-                            <div class="menu_section">
-                                <h3>{{ 'General' | translate}}</h3>
-                                <ul class="nav side-menu">
-                                    <li ng-class="{active: activeTab === 'account'}">
-                                        <a ui-sref="account"><i class="fa fa-edit"></i> {{ 'EditProfile' | translate}} </a>
-                                    </li>
-                                    <li>
-                                        <a ui-sref="record"><i class="fa fa-book"></i> {{ 'Recordsugar' | translate}} </a>
-                                    </li>
-                                    <li>
-                                        <a ui-sref="food"><i class="fa fa-cutlery"></i> {{ 'Addfood' | translate}} <span class="fa fa-chevron-down"></span> </a>
-                                        <ul class="nav child_menu">
-                                            <li><a ui-sref="showFood">{{ 'ShowFood' | translate}}</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a ui-sref="Nutrition"><i class="fa fa-pie-chart"></i> {{ 'Nutrition' | translate}} </a>
-                                    </li>
-                                    <li>
-                                        <a ui-sref="email"><i class="fa fa-share"></i> {{ 'Share' | translate}} </a>
-                                        <!--   <ul class="nav child_menu">
+                    <!-- sidebar menu -->
+                    <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
+                        <div class="menu_section">
+                            <h3>{{ 'General' | translate}}</h3>
+                            <ul class="nav side-menu">
+                                <li ng-class="{active: activeTab === 'account'}">
+                                    <a ui-sref="account"><i class="fa fa-edit"></i> {{ 'EditProfile' | translate}} </a>
+                                </li>
+                                <li>
+                                    <a ui-sref="record"><i class="fa fa-book"></i> {{ 'Recordsugar' | translate}} </a>
+                                </li>
+                                <li>
+                                    <a ui-sref="food"><i class="fa fa-cutlery"></i> {{ 'Addfood' | translate}} <span class="fa fa-chevron-down"></span> </a>
+                                    <ul class="nav child_menu">
+                                        <li><a ui-sref="showFood">{{ 'ShowFood' | translate}}</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a ui-sref="Nutrition"><i class="fa fa-pie-chart"></i> {{ 'Nutrition' | translate}} </a>
+                                </li>
+                                <li>
+                                    <a ui-sref="email"><i class="fa fa-share"></i> {{ 'Share' | translate}} </a>
+                                    <!--   <ul class="nav child_menu">
                                         <li><a href="https://www.google.com/gmail/">Gmail</a></li>
                                         <li><a href="https://th-th.facebook.com/">Facebook</a></li>
                                     </ul>  -->
-                                    </li>
-                                </ul>
-                            </div>
+                                </li>
+                            </ul>
                         </div>
-<<<<<<< HEAD
-                        <!-- /sidebar menu -->
-                        <!-- /menu footer buttons -->
-                        <!--  <div class="sidebar-footer hidden-small">
-                            <a data-toggle="tooltip" data-placement="top" title="Settings">
-                                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
-                            </a>
-                            <a data-toggle="tooltip" data-placement="top" title="FullScreen">
-                                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
-                            </a>
-                            <a data-toggle="tooltip" data-placement="top" title="Lock">
-                                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
-                            </a>
-                            <a data-toggle="tooltip" data-placement="top" title="Logout">
-                                <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
-                            </a>
-                        </div>
-                    <!-- /menu footer buttons -->
-=======
->>>>>>> 5fa0d712058cf21b07e02b2ce235b95c9ab63e05
                     </div>
                 </div>
+            </div>
 
-                <!-- top navigation -->
-                <div class="top_nav">
-                    <div class="nav_menu">
-                        <nav>
-                            <div class="nav toggle">
-                                <a id="menu_toggle"><i class="fa fa-bars"></i></a>
-                            </div>
+            <!-- top navigation -->
+            <div class="top_nav">
+                <div class="nav_menu">
+                    <nav>
+                        <div class="nav toggle">
+                            <a id="menu_toggle"><i class="fa fa-bars"></i></a>
+                        </div>
 
-                            <ul class="nav navbar-nav navbar-right">
-                                <li class="">
-                                    <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                        <img src="../images/user-icon.png" alt=""> {{vm.user.firstname}} {{vm.user.lastname}}
-                                        <span class="fa fa-angle-down"></span>
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-usermenu pull-right">
-                                        <li><a ui-sref="account">{{ 'EditProfile' | translate}}</a></li>
-                                        <!--<li translate="QUESTION"></li><button type="button" class="btn btn-info active" ng-click="changeLanguage('en')" translate="BUTTON_LANG_EN"></button><button type="button" class="btn btn-info active"ng-click="changeLanguage('es')" translate="BUTTON_LANG_ES"></button>-->
-                                        <li>
-                                            <a> {{ 'Changelanguage' | translate}}
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="">
+                                <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <img src="../images/user-icon.png" alt=""> {{vm.user.firstname}} {{vm.user.lastname}}
+                                    <span class="fa fa-angle-down"></span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-usermenu pull-right">
+                                    <li><a ui-sref="account">{{ 'EditProfile' | translate}}</a></li>
+                                    <!--<li translate="QUESTION"></li><button type="button" class="btn btn-info active" ng-click="changeLanguage('en')" translate="BUTTON_LANG_EN"></button><button type="button" class="btn btn-info active"ng-click="changeLanguage('es')" translate="BUTTON_LANG_ES"></button>-->
+                                    <li>
+                                        <a> {{ 'Changelanguage' | translate}}
                                             <img src="../images/USA__Icon_.png" class="ng-scope" ng-click="changeLanguage('en')" translate="BUTTON_LANG_EN"/>
                                             <img src="../images/thailand_icon_sm.png"  class="ng-scope" ng-click="changeLanguage('th')" translate="BUTTON_LANG_TH"/>
                                         </a>
-                                        </li>
+                                    </li>
 
-                                        <li><a href="/login" target="_self"><i class="fa fa-sign-out pull-right"></i>{{ 'Logout' | translate}}</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
+                                    <li><a href="/login" target="_self"><i class="fa fa-sign-out pull-right"></i>{{ 'Logout' | translate}}</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
-<<<<<<< HEAD
             </div>
-=======
-        </div>
-    
->>>>>>> 5fa0d712058cf21b07e02b2ce235b95c9ab63e05
+
 
 
             <!--<nav class="navbar navbar-default" role="navigation">
@@ -202,7 +161,6 @@
                 <div class="x_content" ui-view></div>
 
             </div>
-<<<<<<< HEAD
 
             <!-- footer -->
             <footer>
@@ -212,128 +170,26 @@
                 <div class="clearfix"></div>
             </footer>
 
-            <!-- external scripts -->
-            <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-            <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
-            <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
 
-            <!-- application scripts -->
-            <script src="app.js"></script>
-            <script src="translate/translate.js"></script>
-
-
-            <script src="//cdnjs.cloudflare.com/ajax/libs/angular-translate/2.7.2/angular-translate.js"></script>
-            <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-sanitize.js"></script>
-
-            <script src="app-services/user.service.js"></script>
-            <script src="app-services/flash.service.js"></script>
-            <script src="home/index.controller.js"></script>
-            <script src="account/index.controller.js"></script>
+        </div>
+    </div>
 
 
 
-
-            <script src="../template/vendors/jquery/dist/jquery.min.js"></script>
-            <!-- Bootstrap -->
-            <script src="../template/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-            <!-- FastClick -->
-            <script src="../template/vendors/fastclick/lib/fastclick.js"></script>
-            <!-- NProgress -->
-            <script src="../template/vendors/nprogress/nprogress.js"></script>
-            <!-- Chart.js -->
-            <script src="../template/vendors/Chart.js/dist/Chart.min.js"></script>
-            <!-- gauge.js -->
-            <script src="../template/vendors/gauge.js/dist/gauge.min.js"></script>
-            <!-- bootstrap-progressbar -->
-            <script src="../template/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
-            <!-- iCheck -->
-            <script src="../template/vendors/iCheck/icheck.min.js"></script>
-            <!-- Skycons -->
-            <script src="../template/vendors/skycons/skycons.js"></script>
-            <!-- Flot -->
-            <script src="../template/vendors/Flot/jquery.flot.js"></script>
-            <script src="../template/vendors/Flot/jquery.flot.pie.js"></script>
-            <script src="../template/vendors/Flot/jquery.flot.time.js"></script>
-            <script src="../template/vendors/Flot/jquery.flot.stack.js"></script>
-            <script src="../template/vendors/Flot/jquery.flot.resize.js"></script>
-            <!-- Flot plugins -->
-            <script src="../template/vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
-            <script src="../template/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
-            <script src="../template/vendors/flot.curvedlines/curvedLines.js"></script>
-            <!-- DateJS -->
-            <script src="../template/vendors/DateJS/build/date.js"></script>
-            <!-- JQVMap -->
-            <script src="../template/vendors/jqvmap/dist/jquery.vmap.js"></script>
-            <script src="../template/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
-            <script src="../template/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
-
-            <!-- Custom Theme Scripts -->
-            <script src="../template/build/js/custom.min.js"></script>
-
-            <!-- DateJS -->
-            <script src="../template/vendors/DateJS/build/date.js"></script>
-
-            <!-- morris.js -->
-            <script src="../template/vendors/raphael/raphael.min.js"></script>
-            <script src="../template/vendors/morris.js/morris.min.js"></script>
-
-            <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-
-            <script src="http://cdn.oesmith.co.uk/morris-0.4.1.min.js"></script>
-
-            <!--  <script src="node_modules/angular/angular.min.js"></script>
-  <script src="node_modules/chart.js/dist/Chart.min.js"></script>
-  <script src="node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
-  -->
-            <script>
-                function Controller(UserService) {
-                    var vm = this;
-
-                    vm.user = null;
-
-                    initController();
-
-                    function initController() {
-                        // get current user
-                        UserService.GetCurrent().then(function (user) {
-                            vm.user = user;
-                        });
-                    }
-                }
-
-            </script>
-
-    </body>
-=======
-       
-    <!-- footer -->
-            <footer>
-                <div class="pull-right">
-                            Diabetes Care : An Application of Mobile OCR for medical record tracking in diabetes 
-                        </div>
-                        <div class="clearfix"></div>
-            </footer>
-           
-        
-      </div>
-</div>
-
-    
-    
 
     <!-- external scripts -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script> 
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
 
     <!-- application scripts -->
     <script src="app.js"></script>
     <script src="translate/translate.js"></script>
-    
+
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular-translate/2.7.2/angular-translate.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.1/angular-sanitize.js"></script>
-   
+
     <script src="app-services/user.service.js"></script>
     <script src="app-services/flash.service.js"></script>
     <script src="home/index.controller.js"></script>
@@ -379,52 +235,34 @@
     <!-- Custom Theme Scripts -->
     <script src="../template/build/js/custom.min.js"></script>
 
-     <!-- DateJS -->
+    <!-- DateJS -->
     <script src="../template/vendors/DateJS/build/date.js"></script>
 
 
     <!-- morris.js -->
-    <script src="/template/vendors/raphael/raphael.min.js"></script>
-    <script src="/template/vendors/morris.js/morris.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+
+    <script src="http://cdn.oesmith.co.uk/morris-0.4.1.min.js"></script>
 
 
-<script>
+    <script>
+        function Controller(UserService) {
+            var vm = this;
 
-    function Controller(UserService) {
-        var vm = this;
+            vm.user = null;
 
-        vm.user = null;
+            initController();
 
-        initController();
-
-        function initController() {
-            // get current user
-            UserService.GetCurrent().then(function (user) {
-                vm.user = user;
-            });
+            function initController() {
+                // get current user
+                UserService.GetCurrent().then(function (user) {
+                    vm.user = user;
+                });
+            }
         }
-    }
 
-</script>
-  <script>// <![CDATA[
-  $(document).ready(function(){
-      var from,to,subject,text,from;
-      $("#send_email").click(function(){      
-          to=$("#to").val();
-          subject=$("#subject").val();
-          text=$("#content").val();
-          $("#message").text("Sending E-mail...Please wait");
-          $.get("http://localhost:3000/send",{to:to,subject:subject,text:text},function(data){
-          if(data=="sent")
-          {
-              $("#message").empty().html("Email is been sent at "+to+"");
-          }
+    </script>
 
-  });
-      });
-  });
-  </script>
-
->>>>>>> 5fa0d712058cf21b07e02b2ce235b95c9ab63e05
+</body>
 
 </html>
